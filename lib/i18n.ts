@@ -8,6 +8,38 @@ export function isValidLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
 
+export const routeSlugs = {
+  en: {
+    offers: "offers",
+    why: "why-us",
+    support: "support",
+    faq: "faq",
+    contact: "contact",
+  },
+  fr: {
+    offers: "offres",
+    why: "pourquoi-nous",
+    support: "accompagnement",
+    faq: "faq",
+    contact: "contact",
+  },
+} as const;
+
+export function getLocalizedHref(locale: Locale, page: keyof typeof routeSlugs.en) {
+  return `/${locale}/${routeSlugs[locale][page]}`;
+}
+
+export function getPageFromSlug(locale: Locale, slug?: string) {
+  if (!slug) return "home" as const;
+
+  const entries = Object.entries(routeSlugs[locale]) as Array<
+    [keyof typeof routeSlugs.en, string]
+  >;
+
+  const match = entries.find(([, value]) => value === slug);
+  return match?.[0] ?? null;
+}
+
 export const dictionary = {
   en: {
     meta: {
@@ -15,12 +47,18 @@ export const dictionary = {
       description:
         "Premium Minecraft hosting with clean resources, daily backups, and real human support.",
     },
+    brand: {
+      name: "FALCONHOST",
+      tag: "Minecraft Hosting",
+    },
     nav: {
+      home: "Home",
       offers: "Plans",
       why: "Why choose us",
       support: "Support",
       faq: "FAQ",
       contact: "Contact",
+      primaryCta: "View plans",
       secondaryCta: "Talk about your server",
     },
     hero: {
@@ -35,14 +73,23 @@ export const dictionary = {
     },
     offers: {
       eyebrow: "Plans",
-      title: "Choose the right plan for your server.",
+      homeTitle: "Choose the right plan for your server.",
+      pageTitle: "Plans built for the way Minecraft servers grow.",
+      pageIntro:
+        "Start with the right amount of room, then scale cleanly as your players, plugins, and worlds get heavier.",
       featured: "Most popular",
       cta: "Choose this plan",
+      finalCtaTitle: "Not sure which plan fits your server?",
+      finalCtaText: "Tell us about your project and we will point you to the right starting point.",
+      finalPrimary: "Talk about your server",
+      finalSecondary: "Join Discord",
       items: [
         {
           name: "Starter",
           price: "$15.99/mo",
           fit: "For a private world or a small server.",
+          details: "A clean starting point for a few players, a private world, or a lightweight survival setup.",
+          upgrade: "Move up when your player count or plugin stack starts asking for more headroom.",
           specs: ["2 vCores", "4 GB RAM", "40 GB NVMe"],
           benefits: [
             "Stable for vanilla or light plugins",
@@ -55,6 +102,8 @@ export const dictionary = {
           name: "Community",
           price: "$24.99/mo",
           fit: "For active servers that need more room.",
+          details: "A strong balance for public survival servers and growing communities that want more breathing room.",
+          upgrade: "A natural next step for smaller servers becoming more active and more demanding.",
           specs: ["3 vCores", "6 GB RAM", "60 GB NVMe"],
           benefits: [
             "More headroom for regular player peaks",
@@ -67,6 +116,8 @@ export const dictionary = {
           name: "Performance",
           price: "$34.99/mo",
           fit: "For heavier worlds and busier gameplay.",
+          details: "For larger maps, denser gameplay, and servers that need more comfort under regular load.",
+          upgrade: "A good fit when your world, plugins, and concurrency are no longer light.",
           specs: ["4 vCores", "8 GB RAM", "90 GB NVMe"],
           benefits: [
             "More comfort under load",
@@ -79,6 +130,8 @@ export const dictionary = {
           name: "Managed Modded",
           price: "$54.99/mo",
           fit: "For modded servers and demanding setups.",
+          details: "Designed for modpacks, advanced setups, and communities that need more room and closer support.",
+          upgrade: "Ideal when a standard setup is no longer enough and stability matters more than keeping costs minimal.",
           specs: ["6 vCores", "12 GB RAM", "140 GB NVMe"],
           benefits: [
             "More room for modpacks",
@@ -91,7 +144,10 @@ export const dictionary = {
     },
     why: {
       eyebrow: "Why choose us",
-      title: "Built for admins. Better for players.",
+      homeTitle: "Built for admins. Better for players.",
+      pageTitle: "Premium, for practical reasons.",
+      pageIntro:
+        "We do not compete on the lowest possible price. We focus on clean performance, stable operations, and real support when your server matters.",
       items: [
         {
           title: "Clean resources",
@@ -110,10 +166,31 @@ export const dictionary = {
           text: "Move up cleanly as your community grows.",
         },
       ],
+      deep: [
+        {
+          title: "We are not trying to be the cheapest host",
+          text: "Budget hosting often wins on entry price by packing machines harder and keeping support thinner. That is not the model here.",
+        },
+        {
+          title: "Load per machine matters",
+          text: "When a host pushes too many servers onto the same machine, consistency suffers first. We prefer cleaner allocation and a calmer operating margin.",
+        },
+        {
+          title: "Support should feel human",
+          text: "When you need guidance, migration help, or a better fit, you should be able to talk to someone who understands what your server actually needs.",
+        },
+        {
+          title: "A premium server should stay easy to run",
+          text: "Backups, clear upgrade paths, and predictable support reduce friction for admins and make the server easier to trust over time.",
+        },
+      ],
     },
     support: {
       eyebrow: "How we support your server",
-      title: "Clear help, from setup to growth.",
+      homeTitle: "Clear help, from setup to growth.",
+      pageTitle: "A cleaner path from setup to growth.",
+      pageIntro:
+        "Good hosting is not only about hardware. It is also about starting clean, moving cleanly, and scaling without creating avoidable problems later.",
       items: [
         {
           step: "1",
@@ -131,10 +208,43 @@ export const dictionary = {
           text: "When your server grows, you can upgrade without starting over.",
         },
       ],
+      deep: [
+        {
+          title: "Choosing the right plan",
+          text: "Player count, plugin stack, world size, and modded needs all matter. We help you avoid starting too small or paying for far too much too early.",
+        },
+        {
+          title: "Starting clean",
+          text: "A good launch begins with a stable setup, fast storage, and a clear structure that keeps the server easier to manage over time.",
+        },
+        {
+          title: "Migration help when needed",
+          text: "If you already run a server elsewhere, we can help you approach the move more cleanly and with less friction.",
+        },
+        {
+          title: "Growing without rebuilding everything",
+          text: "As your community grows, the goal is to scale in a way that keeps your world, files, and admin workflow intact.",
+        },
+      ],
     },
     faq: {
       eyebrow: "FAQ",
-      title: "Questions, answered.",
+      homeTitle: "Questions, answered.",
+      pageTitle: "Questions before you choose.",
+      homeItems: [
+        {
+          q: "Why are you more expensive than a budget host?",
+          a: "Because you are paying for cleaner resource allocation, daily backups, and real support — not just a low entry price.",
+        },
+        {
+          q: "Is this suitable for modded servers?",
+          a: "Yes. Performance fits lighter modded setups. Managed Modded is built for heavier packs and more demanding projects.",
+        },
+        {
+          q: "What happens if my server grows?",
+          a: "You move to a higher plan cleanly, without having to rebuild everything too early.",
+        },
+      ],
       items: [
         {
           q: "Why are you more expensive than a budget host?",
@@ -156,11 +266,13 @@ export const dictionary = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Talk to us about your server.",
-      subtitle: "For plan advice, migrations, or modded setups, we can help.",
+      pageTitle: "Talk to us about your server.",
+      pageIntro:
+        "For plan advice, migrations, or modded setups, we can help you move in the right direction quickly.",
       cards: [
         { label: "Discord", value: "discord.gg/falconhost" },
         { label: "Email", value: "contact@falconhost.gg" },
+        { label: "Response", value: "Clear replies for projects, upgrades, and migrations" },
       ],
       formTitle: "Tell us about your project",
       fields: {
@@ -177,6 +289,15 @@ export const dictionary = {
       },
       submit: "Send request",
     },
+    home: {
+      whyCta: "Why choose us",
+      supportCta: "See how we help",
+      faqCta: "Read FAQ",
+      finalTitle: "Ready for a cleaner hosting experience?",
+      finalText: "Choose a plan or tell us about your server.",
+      finalPrimary: "View plans",
+      finalSecondary: "Contact us",
+    },
     footer: {
       tagline: "Premium Minecraft hosting with clean resources and real support.",
       summary: "Ryzen 9 9950X3D · NVMe · Human support · Daily backups",
@@ -189,12 +310,18 @@ export const dictionary = {
       description:
         "Un hébergement Minecraft premium avec des ressources propres, des sauvegardes quotidiennes et un vrai support humain.",
     },
+    brand: {
+      name: "FALCONHOST",
+      tag: "Minecraft Hosting",
+    },
     nav: {
+      home: "Accueil",
       offers: "Offres",
       why: "Pourquoi nous choisir",
       support: "Accompagnement",
       faq: "FAQ",
       contact: "Contact",
+      primaryCta: "Voir les offres",
       secondaryCta: "Parler de votre serveur",
     },
     hero: {
@@ -209,14 +336,23 @@ export const dictionary = {
     },
     offers: {
       eyebrow: "Offres",
-      title: "Choisissez la bonne offre pour votre serveur.",
+      homeTitle: "Choisissez la bonne offre pour votre serveur.",
+      pageTitle: "Des offres pensées pour la vraie vie d’un serveur Minecraft.",
+      pageIntro:
+        "Commencez avec une base cohérente, puis montez en gamme proprement quand les joueurs, les plugins et les mondes deviennent plus exigeants.",
       featured: "Le plus choisi",
       cta: "Choisir cette offre",
+      finalCtaTitle: "Pas certain de l’offre qui vous convient ?",
+      finalCtaText: "Parlez-nous de votre projet et on vous oriente vers la bonne base.",
+      finalPrimary: "Parler de votre serveur",
+      finalSecondary: "Rejoindre Discord",
       items: [
         {
           name: "Starter",
           price: "$15.99/mo",
           fit: "Pour un monde privé ou un petit serveur.",
+          details: "Une base propre pour quelques joueurs, un monde privé ou une survie légère.",
+          upgrade: "Passez à l’offre au-dessus quand le nombre de joueurs ou les plugins demandent plus de marge.",
           specs: ["2 vCores", "4 Go RAM", "40 Go NVMe"],
           benefits: [
             "Stable pour du vanilla ou des plugins légers",
@@ -229,6 +365,8 @@ export const dictionary = {
           name: "Community",
           price: "$24.99/mo",
           fit: "Pour les serveurs actifs qui ont besoin de marge.",
+          details: "Un excellent équilibre pour les serveurs publics et les communautés en croissance.",
+          upgrade: "L’étape naturelle pour un petit serveur qui devient plus vivant et plus exigeant.",
           specs: ["3 vCores", "6 Go RAM", "60 Go NVMe"],
           benefits: [
             "Plus d’aisance en cas de pics réguliers",
@@ -241,6 +379,8 @@ export const dictionary = {
           name: "Performance",
           price: "$34.99/mo",
           fit: "Pour les mondes plus lourds et un gameplay plus dense.",
+          details: "Pour les grandes maps, les setups plus chargés et les serveurs qui veulent plus de confort sous charge.",
+          upgrade: "Le bon choix quand le monde, les plugins et la fréquentation ne sont plus vraiment légers.",
           specs: ["4 vCores", "8 Go RAM", "90 Go NVMe"],
           benefits: [
             "Plus de confort sous charge",
@@ -253,6 +393,8 @@ export const dictionary = {
           name: "Managed Modded",
           price: "$54.99/mo",
           fit: "Pour les serveurs moddés et les setups exigeants.",
+          details: "Pensé pour les modpacks, les configs avancées et les projets qui demandent plus de marge et plus de suivi.",
+          upgrade: "Idéal quand une configuration standard ne suffit plus et que la stabilité passe avant l’économie maximale.",
           specs: ["6 vCores", "12 Go RAM", "140 Go NVMe"],
           benefits: [
             "Plus de marge pour les modpacks",
@@ -265,7 +407,10 @@ export const dictionary = {
     },
     why: {
       eyebrow: "Pourquoi nous choisir",
-      title: "Pensé pour l’admin. Meilleur pour les joueurs.",
+      homeTitle: "Pensé pour l’admin. Meilleur pour les joueurs.",
+      pageTitle: "Premium, pour des raisons concrètes.",
+      pageIntro:
+        "Nous ne cherchons pas à être l’hébergeur le moins cher. Nous privilégions une performance propre, une exploitation stable et un support réel quand votre serveur compte vraiment.",
       items: [
         {
           title: "Ressources propres",
@@ -284,10 +429,31 @@ export const dictionary = {
           text: "Vous évoluez proprement quand votre communauté grandit.",
         },
       ],
+      deep: [
+        {
+          title: "Nous ne jouons pas la carte du moins cher",
+          text: "L’hébergement budget gagne souvent sur le prix d’appel en chargeant davantage les machines et en gardant un support plus léger. Ce n’est pas le choix ici.",
+        },
+        {
+          title: "La charge par machine compte vraiment",
+          text: "Quand trop de serveurs partagent la même machine, la régularité est la première à souffrir. Nous préférons une allocation plus propre et plus sereine.",
+        },
+        {
+          title: "Le support doit rester humain",
+          text: "Quand vous avez besoin d’un conseil, d’une migration ou d’un meilleur dimensionnement, vous devez pouvoir parler à quelqu’un qui comprend réellement votre besoin.",
+        },
+        {
+          title: "Un serveur premium doit rester simple à exploiter",
+          text: "Sauvegardes, évolution claire et support prévisible réduisent la friction côté admin et rendent le service plus rassurant dans le temps.",
+        },
+      ],
     },
     support: {
       eyebrow: "Comment on accompagne votre serveur",
-      title: "Un accompagnement clair, du lancement à la montée en charge.",
+      homeTitle: "Un accompagnement clair, du lancement à la montée en charge.",
+      pageTitle: "Une trajectoire plus propre, du setup à la croissance.",
+      pageIntro:
+        "Un bon hébergement ne se limite pas au matériel. Il faut aussi un départ propre, une migration claire si besoin, et une montée en charge sans créer de problèmes évitables.",
       items: [
         {
           step: "1",
@@ -305,10 +471,43 @@ export const dictionary = {
           text: "Quand le serveur grossit, vous pouvez monter en gamme sans repartir de zéro.",
         },
       ],
+      deep: [
+        {
+          title: "Choisir la bonne offre",
+          text: "Nombre de joueurs, pile de plugins, taille du monde et besoins moddés : on vous aide à éviter une base trop faible ou inutilement surdimensionnée.",
+        },
+        {
+          title: "Partir proprement",
+          text: "Un bon lancement repose sur une base stable, un stockage rapide et une structure claire qui reste simple à gérer dans le temps.",
+        },
+        {
+          title: "Aide à la migration si nécessaire",
+          text: "Si votre serveur tourne déjà ailleurs, on peut vous aider à préparer un passage plus propre et moins pénible.",
+        },
+        {
+          title: "Grandir sans tout reconstruire",
+          text: "Quand la communauté grandit, l’objectif est d’évoluer sans casser votre monde, vos fichiers ou vos habitudes d’administration.",
+        },
+      ],
     },
     faq: {
       eyebrow: "FAQ",
-      title: "Les réponses essentielles.",
+      homeTitle: "Les réponses essentielles.",
+      pageTitle: "Les questions à se poser avant de choisir.",
+      homeItems: [
+        {
+          q: "Pourquoi êtes-vous plus cher qu’un host budget ?",
+          a: "Parce que vous payez des ressources mieux tenues, des sauvegardes quotidiennes et un vrai support — pas seulement un prix d’entrée bas.",
+        },
+        {
+          q: "Est-ce adapté aux serveurs moddés ?",
+          a: "Oui. Performance convient aux setups moddés légers. Managed Modded est prévu pour les packs plus lourds et les projets plus exigeants.",
+        },
+        {
+          q: "Que se passe-t-il si mon serveur grandit ?",
+          a: "Vous passez sur une offre supérieure proprement, sans devoir tout reconstruire trop tôt.",
+        },
+      ],
       items: [
         {
           q: "Pourquoi êtes-vous plus cher qu’un host budget ?",
@@ -330,11 +529,13 @@ export const dictionary = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Parlez-nous de votre serveur.",
-      subtitle: "Pour une offre, une migration ou un projet moddé, on vous répond vite.",
+      pageTitle: "Parlez-nous de votre serveur.",
+      pageIntro:
+        "Pour une offre, une migration ou un projet moddé, on peut vous aider à avancer rapidement dans la bonne direction.",
       cards: [
         { label: "Discord", value: "discord.gg/falconhost" },
         { label: "Email", value: "contact@falconhost.gg" },
+        { label: "Réponse", value: "Des retours clairs pour projets, upgrades et migrations" },
       ],
       formTitle: "Présentez votre projet",
       fields: {
@@ -350,6 +551,15 @@ export const dictionary = {
         message: "Parlez-nous de votre serveur et de votre besoin.",
       },
       submit: "Envoyer la demande",
+    },
+    home: {
+      whyCta: "Pourquoi nous choisir",
+      supportCta: "Voir notre accompagnement",
+      faqCta: "Lire la FAQ",
+      finalTitle: "Prêt pour un hébergement plus propre ?",
+      finalText: "Choisissez une offre ou parlez-nous de votre serveur.",
+      finalPrimary: "Voir les offres",
+      finalSecondary: "Nous contacter",
     },
     footer: {
       tagline: "Un hébergement Minecraft premium avec des ressources propres et un vrai support.",

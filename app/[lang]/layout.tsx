@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getDictionary, isValidLocale, Locale, locales } from "@/lib/i18n";
+import { getDictionary, isValidLocale, Locale } from "@/lib/i18n";
 
 type Props = {
   children: React.ReactNode;
   params: { lang: string };
 };
-
-export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }));
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isValidLocale(params.lang)) {
