@@ -145,8 +145,13 @@ const addons = [
 export default function Page() {
   return (
     <main className="relative overflow-hidden bg-[#050b14] text-white">
-      <div className="absolute inset-0 bg-hero" />
-      <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(circle_at_20%_20%,rgba(255,122,24,0.18),transparent_20%),radial-gradient(circle_at_80%_15%,rgba(90,168,255,0.2),transparent_24%),linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:auto,auto,48px_48px,48px_48px]" />
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,9,18,0.78)_0%,rgba(8,15,28,0.48)_36%,rgba(5,10,18,0.76)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,140,255,0.12),transparent_32%)]" />
+      <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:48px_48px,48px_48px]" />
       <div className="absolute left-[-10%] top-[12%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
       <div className="absolute right-[-8%] top-[32%] h-80 w-80 rounded-full bg-accent/15 blur-3xl" />
 
