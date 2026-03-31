@@ -78,6 +78,7 @@ export const dictionary = {
       pageIntro:
         "Start with the right amount of room, then scale cleanly as your players, plugins, and worlds get heavier.",
       featured: "Most popular",
+      bestForLabel: "Best for",
       cta: "Choose this plan",
       finalCtaTitle: "Not sure which plan fits your server?",
       finalCtaText: "Tell us about your project and we will point you to the right starting point.",
@@ -188,6 +189,8 @@ export const dictionary = {
     support: {
       eyebrow: "How we support your server",
       homeTitle: "Clear help, from setup to growth.",
+      homePreview:
+        "Choosing the right plan, starting clean, and scaling without rebuilding everything.",
       pageTitle: "A cleaner path from setup to growth.",
       pageIntro:
         "Good hosting is not only about hardware. It is also about starting clean, moving cleanly, and scaling without creating avoidable problems later.",
@@ -266,6 +269,8 @@ export const dictionary = {
     },
     contact: {
       eyebrow: "Contact",
+      homePreviewTitle: "Talk to us about your server.",
+      homePreviewText: "For plan advice, migrations, or modded setups, we can help quickly.",
       pageTitle: "Talk to us about your server.",
       pageIntro:
         "For plan advice, migrations, or modded setups, we can help you move in the right direction quickly.",
@@ -293,6 +298,7 @@ export const dictionary = {
       whyCta: "Why choose us",
       supportCta: "See how we help",
       faqCta: "Read FAQ",
+      contactCta: "Contact us",
       finalTitle: "Ready for a cleaner hosting experience?",
       finalText: "Choose a plan or tell us about your server.",
       finalPrimary: "View plans",
@@ -341,6 +347,7 @@ export const dictionary = {
       pageIntro:
         "Commencez avec une base cohérente, puis montez en gamme proprement quand les joueurs, les plugins et les mondes deviennent plus exigeants.",
       featured: "Le plus choisi",
+      bestForLabel: "Idéal pour",
       cta: "Choisir cette offre",
       finalCtaTitle: "Pas certain de l’offre qui vous convient ?",
       finalCtaText: "Parlez-nous de votre projet et on vous oriente vers la bonne base.",
@@ -451,6 +458,8 @@ export const dictionary = {
     support: {
       eyebrow: "Comment on accompagne votre serveur",
       homeTitle: "Un accompagnement clair, du lancement à la montée en charge.",
+      homePreview:
+        "Choisir la bonne offre, partir sur une base propre, puis évoluer sans tout reconstruire.",
       pageTitle: "Une trajectoire plus propre, du setup à la croissance.",
       pageIntro:
         "Un bon hébergement ne se limite pas au matériel. Il faut aussi un départ propre, une migration claire si besoin, et une montée en charge sans créer de problèmes évitables.",
@@ -529,6 +538,8 @@ export const dictionary = {
     },
     contact: {
       eyebrow: "Contact",
+      homePreviewTitle: "Parlez-nous de votre serveur.",
+      homePreviewText: "Pour une offre, une migration ou un projet moddé, on vous répond vite.",
       pageTitle: "Parlez-nous de votre serveur.",
       pageIntro:
         "Pour une offre, une migration ou un projet moddé, on peut vous aider à avancer rapidement dans la bonne direction.",
@@ -556,6 +567,7 @@ export const dictionary = {
       whyCta: "Pourquoi nous choisir",
       supportCta: "Voir notre accompagnement",
       faqCta: "Lire la FAQ",
+      contactCta: "Nous contacter",
       finalTitle: "Prêt pour un hébergement plus propre ?",
       finalText: "Choisissez une offre ou parlez-nous de votre serveur.",
       finalPrimary: "Voir les offres",

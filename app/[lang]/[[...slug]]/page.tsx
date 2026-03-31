@@ -72,7 +72,8 @@ export default function LocalizedPage({ params }: Props) {
             ) : null}
 
             <div className="text-2xl font-bold text-white">{offer.name}</div>
-            <p className="mt-3 min-h-[48px] text-sm leading-6 text-slate-300">{offer.fit}</p>
+            <div className="mt-3 text-xs uppercase tracking-[0.24em] text-slate-400">{dict.offers.bestForLabel}</div>
+            <p className="mt-2 min-h-[48px] text-sm leading-6 text-slate-300">{offer.fit}</p>
             <div className="mt-5 text-4xl font-black text-white">{offer.price}</div>
 
             <div className="mt-6 space-y-3">
@@ -106,7 +107,7 @@ export default function LocalizedPage({ params }: Props) {
       {page === "home" ? (
         <>
           <section className="relative z-10">
-            <div className="section-shell grid min-h-[82vh] items-center gap-16 py-20 md:grid-cols-[1.08fr_0.92fr] md:py-32">
+            <div className="section-shell grid min-h-[80vh] items-center gap-16 py-24 md:grid-cols-[1.08fr_0.92fr] md:py-36">
               <div>
                 <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm text-primary shadow-glow backdrop-blur-md">
                   {dict.hero.badge}
@@ -137,32 +138,30 @@ export default function LocalizedPage({ params }: Props) {
 
               <div className="relative">
                 <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/15 via-transparent to-accent/15 blur-2xl" />
-                <div className="glass-card relative overflow-hidden p-7 shadow-glow md:p-8">
+                <div className="glass-card relative overflow-hidden p-8 shadow-glow md:p-10">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,122,24,0.10),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(90,168,255,0.14),transparent_30%)]" />
-                  <div className="relative grid gap-4">
-                    {dict.support.items.map((item) => (
-                      <div key={item.step} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <div className="text-sm text-slate-400">{item.title}</div>
-                        <div className="mt-2 text-lg font-semibold text-white">{item.text}</div>
-                      </div>
-                    ))}
+                  <div className="relative">
+                    <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.support.eyebrow}</div>
+                    <h2 className="mt-4 text-3xl font-bold text-white">{dict.support.homeTitle}</h2>
+                    <p className="mt-5 max-w-xl leading-7 text-slate-300">{dict.support.homePreview}</p>
+                    <Link href={supportHref} className="cta-secondary mt-8 w-fit">{dict.home.supportCta}</Link>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="relative z-10 py-28">
+          <section className="relative z-10 py-32">
             <div className="section-shell">
               <div className="mx-auto max-w-2xl text-center">
                 <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.offers.eyebrow}</div>
                 <h2 className="section-title mt-4">{dict.offers.homeTitle}</h2>
               </div>
-              <div className="mt-16">{pricingGrid}</div>
+              <div className="mt-18 mt-16">{pricingGrid}</div>
             </div>
           </section>
 
-          <section className="relative z-10 py-28">
+          <section className="relative z-10 py-32">
             <div className="section-shell">
               <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
                 <div className="max-w-3xl">
@@ -183,43 +182,33 @@ export default function LocalizedPage({ params }: Props) {
             </div>
           </section>
 
-          <section className="relative z-10 py-28">
-            <div className="section-shell">
-              <div className="glass-card grid gap-8 p-8 md:grid-cols-[0.9fr_1.1fr] md:p-10">
-                <div>
-                  <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.support.eyebrow}</div>
-                  <h2 className="section-title mt-4">{dict.support.homeTitle}</h2>
-                </div>
-                <div className="space-y-4">
-                  {dict.support.items.map((item) => (
-                    <div key={item.step} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <div className="text-lg font-semibold text-white">{item.title}</div>
-                      <p className="mt-2 leading-7 text-slate-300">{item.text}</p>
+          <section className="relative z-10 py-32">
+            <div className="section-shell grid gap-6 lg:grid-cols-2">
+              <div className="glass-card p-8 md:p-10">
+                <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.faq.eyebrow}</div>
+                <h2 className="section-title mt-4">{dict.faq.homeTitle}</h2>
+                <FaqAccordion items={dict.faq.homeItems} />
+                <Link href={faqHref} className="cta-secondary mt-8 w-fit">{dict.home.faqCta}</Link>
+              </div>
+
+              <div className="glass-card p-8 md:p-10">
+                <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.contact.eyebrow}</div>
+                <h2 className="section-title mt-4">{dict.contact.homePreviewTitle}</h2>
+                <p className="section-copy mt-5 max-w-xl">{dict.contact.homePreviewText}</p>
+                <div className="mt-8 grid gap-4">
+                  {dict.contact.cards.slice(0, 2).map((card) => (
+                    <div key={card.label} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                      <div className="text-sm text-slate-400">{card.label}</div>
+                      <div className="mt-2 text-lg font-semibold text-white">{card.value}</div>
                     </div>
                   ))}
-                  <Link href={supportHref} className="cta-secondary mt-2 w-fit">{dict.home.supportCta}</Link>
                 </div>
+                <Link href={contactHref} className="cta-secondary mt-8 w-fit">{dict.home.contactCta}</Link>
               </div>
             </div>
           </section>
 
-          <section className="relative z-10 py-28">
-            <div className="section-shell">
-              <div className="glass-card p-8 md:p-10">
-                <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                  <div className="max-w-3xl">
-                    <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.faq.eyebrow}</div>
-                    <h2 className="section-title mt-4">{dict.faq.homeTitle}</h2>
-                  </div>
-                  <Link href={faqHref} className="cta-secondary w-fit">{dict.home.faqCta}</Link>
-                </div>
-
-                <FaqAccordion items={dict.faq.homeItems} />
-              </div>
-            </div>
-          </section>
-
-          <section className="relative z-10 py-28">
+          <section className="relative z-10 py-32">
             <div className="section-shell">
               <div className="glass-card p-8 text-center md:p-12">
                 <div className="mx-auto max-w-3xl">
