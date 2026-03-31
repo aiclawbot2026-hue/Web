@@ -108,42 +108,46 @@ export default function LocalizedPage({ params }: Props) {
           </div>
 
           <div className="mt-16 grid gap-6 lg:grid-cols-4">
-            {dict.offers.items.map((offer) => (
-              <article
-                key={offer.name}
-                className={`pricing-card relative flex h-full flex-col overflow-hidden p-6 ${offer.featured ? "featured-card scale-[1.02]" : ""}`}
-              >
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-accentSoft" />
-                {offer.featured ? (
-                  <div className="mb-4 inline-flex w-fit rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white">
-                    {dict.offers.featured}
+            {dict.offers.items.map((offer) => {
+              const isFeatured = offer.featured === true;
+
+              return (
+                <article
+                  key={offer.name}
+                  className={`pricing-card relative flex h-full flex-col overflow-hidden p-6 ${isFeatured ? "featured-card scale-[1.02]" : ""}`}
+                >
+                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-accentSoft" />
+                  {isFeatured ? (
+                    <div className="mb-4 inline-flex w-fit rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white">
+                      {dict.offers.featured}
+                    </div>
+                  ) : null}
+
+                  <div className="text-2xl font-bold text-white">{offer.name}</div>
+                  <p className="mt-3 min-h-[48px] text-sm leading-6 text-slate-300">{offer.fit}</p>
+                  <div className="mt-5 text-4xl font-black text-white">{offer.price}</div>
+
+                  <div className="mt-6 space-y-3">
+                    {offer.specs.map((spec) => (
+                      <div key={spec} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200">
+                        {spec}
+                      </div>
+                    ))}
                   </div>
-                ) : null}
 
-                <div className="text-2xl font-bold text-white">{offer.name}</div>
-                <p className="mt-3 min-h-[48px] text-sm leading-6 text-slate-300">{offer.fit}</p>
-                <div className="mt-5 text-4xl font-black text-white">{offer.price}</div>
+                  <div className="mt-6 space-y-3">
+                    {offer.benefits.map((benefit) => (
+                      <div key={benefit} className="flex items-start gap-3 text-sm leading-6 text-slate-300">
+                        <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+                        <div>{benefit}</div>
+                      </div>
+                    ))}
+                  </div>
 
-                <div className="mt-6 space-y-3">
-                  {offer.specs.map((spec) => (
-                    <div key={spec} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200">
-                      {spec}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 space-y-3">
-                  {offer.benefits.map((benefit) => (
-                    <div key={benefit} className="flex items-start gap-3 text-sm leading-6 text-slate-300">
-                      <div className="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
-                      <div>{benefit}</div>
-                    </div>
-                  ))}
-                </div>
-
-                <a href="#contact" className="cta-primary mt-8 w-full">{dict.offers.cta}</a>
-              </article>
-            ))}
+                  <a href="#contact" className="cta-primary mt-8 w-full">{dict.offers.cta}</a>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
