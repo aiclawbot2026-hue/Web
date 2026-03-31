@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hébergement Minecraft Premium",
+  title: "FALCONHOST — Premium Minecraft Hosting",
   description:
-    "Landing page premium pour une offre d’hébergement Minecraft sérieuse, rapide et propulsée par Ryzen 9 9950X3D.",
+    "Premium Minecraft hosting for communities that want stability, clear scaling, and real human support.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

@@ -32,6 +32,14 @@ body {
   @apply rounded-3xl border border-line bg-surface backdrop-blur-xl;
 }
 
+.pricing-card {
+  @apply rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,23,38,0.92)_0%,rgba(10,16,28,0.92)_100%)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(0,0,0,0.35)];
+}
+
+.featured-card {
+  @apply border-accent/50 shadow-[0_18px_70px_rgba(255,122,24,0.14)];
+}
+
 .section-title {
   @apply text-3xl font-bold tracking-tight text-white md:text-5xl;
 }
@@ -46,4 +54,8 @@ body {
 
 .cta-secondary {
   @apply inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10;
+}
+
+.field-input {
+  @apply w-full rounded-2xl border border-white/10 bg-[#09111d] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-primary/60;
 }
