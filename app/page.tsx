@@ -3,117 +3,117 @@ const offers = [
     name: "Starter",
     price: "$15.99/mo",
     cores: "2 vCores",
-    ram: "4 GB RAM",
-    storage: "40 GB NVMe",
-    label: "For private worlds and smaller servers",
+    ram: "4 Go RAM",
+    storage: "40 Go NVMe",
+    label: "Idéal pour serveur privé, survie entre amis ou petit projet",
   },
   {
     name: "Community",
     price: "$24.99/mo",
     cores: "3 vCores",
-    ram: "6 GB RAM",
-    storage: "60 GB NVMe",
-    label: "For growing communities that need headroom",
+    ram: "6 Go RAM",
+    storage: "60 Go NVMe",
+    label: "Pensé pour les communautés qui veulent plus de marge",
     featured: true,
   },
   {
     name: "Performance",
     price: "$34.99/mo",
     cores: "4 vCores",
-    ram: "8 GB RAM",
-    storage: "90 GB NVMe",
-    label: "For smoother gameplay and busier setups",
+    ram: "8 Go RAM",
+    storage: "90 Go NVMe",
+    label: "Pour un gameplay plus fluide et des serveurs plus ambitieux",
   },
   {
     name: "Managed Modded",
     price: "$54.99/mo",
     cores: "6 vCores",
-    ram: "12 GB RAM",
-    storage: "140 GB NVMe",
-    label: "For heavier modpacks and more involved projects",
+    ram: "12 Go RAM",
+    storage: "140 Go NVMe",
+    label: "Pour modpacks lourds, maps avancées et projets exigeants",
   },
 ];
 
 const advantages = [
   {
-    title: "Premium positioning backed by real hardware",
-    text: "Ryzen 9 9950X3D and fast NVMe storage are not there for decoration. They support a cleaner performance profile and a more credible premium offer.",
+    title: "Un hébergement premium soutenu par un vrai matériel",
+    text: "Le Ryzen 9 9950X3D et le stockage NVMe rapide ne servent pas à impressionner sur une fiche technique. Ils soutiennent une promesse de performance plus stable et plus sérieuse.",
   },
   {
-    title: "Built for people who want fewer headaches",
-    text: "The offer is designed around stability, clean plan structure and direct help, instead of chasing the lowest possible price point.",
+    title: "Une offre pensée pour vendre la tranquillité",
+    text: "Ici, le but n’est pas d’empiler des promesses marketing. Le but est de proposer une expérience plus propre, plus claire et plus rassurante pour les serveurs qui comptent vraiment.",
   },
   {
-    title: "Upgrade paths that make sense",
-    text: "As your map, plugins, backups and player count grow, the service is positioned to evolve cleanly instead of forcing a messy rebuild.",
+    title: "Une montée en gamme naturelle",
+    text: "Quand votre map grandit, que les plugins s’accumulent ou que les pics de joueurs deviennent réguliers, l’évolution se fait proprement, sans repartir de zéro.",
   },
   {
-    title: "Human support that feels real",
-    text: "The value is not just specs on a page. It is responsive guidance, migration help, practical answers and a more hands-on relationship.",
+    title: "Un support humain qui inspire confiance",
+    text: "La valeur premium ne repose pas uniquement sur les ressources. Elle repose aussi sur l’accompagnement, l’aide à la migration et des réponses concrètes quand vous en avez besoin.",
   },
 ];
 
 const faq = [
   {
-    q: "Why would I choose this over a cheaper host?",
-    a: "Because this is not built to win a race to the bottom. The value is in cleaner resource allocation, more direct help, a more serious presentation and a smoother upgrade path as your server grows.",
+    q: "Pourquoi choisir cette offre plutôt qu’un hébergeur moins cher ?",
+    a: "Parce que cette offre n’est pas conçue pour gagner une guerre des prix. Elle est conçue pour offrir une meilleure tenue dans le temps, une allocation plus propre des ressources et une expérience plus rassurante pour les projets sérieux.",
   },
   {
-    q: "Is this a good fit for modded servers?",
-    a: "Yes, especially on the higher plans. The Managed Modded offer is positioned for heavier setups, larger worlds and communities that need more breathing room.",
+    q: "Est-ce adapté aux serveurs moddés ?",
+    a: "Oui, surtout sur les formules supérieures. Managed Modded est pensée pour des environnements plus lourds, avec davantage de besoins en mémoire, en stockage et en accompagnement.",
   },
   {
-    q: "Can you promise zero lag?",
-    a: "No honest host should promise that in every situation. What this offer does promise is more careful sizing, stronger foundations and real help when your server needs tuning or more headroom.",
+    q: "Peux-tu garantir zéro lag ?",
+    a: "Aucun hébergeur sérieux ne devrait promettre cela dans tous les cas. En revanche, l’objectif ici est de proposer un dimensionnement propre, un matériel solide et un accompagnement réel si votre configuration doit évoluer.",
   },
   {
-    q: "What happens if my server grows?",
-    a: "That is part of the premium promise. You start with a plan that fits today, then scale RAM and storage in a cleaner way when growth is actually justified.",
+    q: "Que se passe-t-il si mon serveur grandit ?",
+    a: "C’est justement l’intérêt de l’approche premium. Vous démarrez avec une formule cohérente, puis vous ajoutez des ressources au bon moment, sans vous retrouver bloqué dans une offre mal pensée.",
   },
 ];
 
 const proofPoints = [
-  "Ryzen 9 9950X3D hardware focus",
-  "Daily backup positioning",
-  "Migration help and hands-on support",
-  "Simple upgrade path when your server grows",
+  "Ryzen 9 9950X3D mis en avant comme preuve de sérieux",
+  "Sauvegardes quotidiennes et logique d’exploitation propre",
+  "Aide à la migration et accompagnement plus impliqué",
+  "Évolution simple quand le serveur prend de l’ampleur",
 ];
 
 const onboarding = [
-  "Clear starting plans instead of a confusing catalog",
-  "Help for server sizing, migrations and next steps",
-  "A calmer, more serious premium tone for the US market",
-  "Built on Vercel now, ready for stronger sales flow later",
+  "Des offres claires au lieu d’un catalogue interminable",
+  "Un accompagnement pour choisir la bonne formule dès le départ",
+  "Un ton plus haut de gamme, plus sobre et plus crédible",
+  "Une base déjà prête pour Vercel et les évolutions futures",
 ];
 
 const comparison = [
   {
-    label: "Positioning",
-    premium: "Premium boutique hosting for communities that value stability",
-    budget: "Mass-market hosting built to compete mainly on price",
+    label: "Positionnement",
+    premium: "Un hébergement premium pensé pour les communautés qui privilégient la stabilité",
+    budget: "Un hébergement de masse conçu d’abord pour rivaliser sur le prix",
   },
   {
     label: "Support",
-    premium: "Human, direct and more hands-on when you need help",
-    budget: "Often more generic and volume-oriented",
+    premium: "Un support humain, plus direct et plus impliqué",
+    budget: "Un support souvent plus générique et plus standardisé",
   },
   {
-    label: "Growth path",
-    premium: "Cleaner upgrades as RAM, storage and usage grow",
-    budget: "Can feel more rigid or less guided",
+    label: "Évolution",
+    premium: "Une montée en gamme plus propre à mesure que les besoins augmentent",
+    budget: "Une progression parfois plus rigide et moins accompagnée",
   },
   {
-    label: "Sales promise",
-    premium: "Reliability, trust and smoother operations",
-    budget: "Cheap entry pricing and convenience first",
+    label: "Promesse",
+    premium: "Fiabilité, confiance et qualité d’exploitation",
+    budget: "Prix d’entrée bas et commodité immédiate",
   },
 ];
 
 const trust = [
-  "Daily backups positioned as standard operational discipline",
-  "Migration help to reduce switching friction",
-  "Clear plan structure without bloated checkout confusion",
-  "Premium tone that makes the service feel serious from first contact",
+  "Des sauvegardes quotidiennes présentées comme un standard de sérieux",
+  "Une aide à la migration pour réduire les frictions de départ",
+  "Une grille simple à comprendre, pensée pour convertir sans confusion",
+  "Une communication premium qui rend le service crédible dès les premières secondes",
 ];
 
 export default function Page() {
@@ -128,17 +128,17 @@ export default function Page() {
         <div className="section-shell flex items-center justify-between py-5">
           <div>
             <div className="text-lg font-bold tracking-[0.22em] text-white">FALCONHOST</div>
-            <div className="text-xs uppercase tracking-[0.35em] text-slate-400">Premium Minecraft Hosting</div>
+            <div className="text-xs uppercase tracking-[0.35em] text-slate-400">Hébergement Minecraft Premium</div>
           </div>
 
           <nav className="hidden gap-8 text-sm text-slate-200 md:flex">
-            <a href="#home" className="hover:text-white">Home</a>
-            <a href="#offers" className="hover:text-white">Plans</a>
-            <a href="#comparison" className="hover:text-white">Compare</a>
+            <a href="#home" className="hover:text-white">Accueil</a>
+            <a href="#offers" className="hover:text-white">Offres</a>
+            <a href="#comparison" className="hover:text-white">Comparer</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </nav>
 
-          <a href="#contact" className="cta-secondary">Talk about your server</a>
+          <a href="#contact" className="cta-secondary">Parler de votre serveur</a>
         </div>
       </header>
 
@@ -146,32 +146,32 @@ export default function Page() {
         <div className="section-shell grid min-h-[92vh] items-center gap-12 py-20 md:grid-cols-[1.15fr_0.85fr] md:py-28">
           <div>
             <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm text-primary shadow-glow">
-              Premium hosting infrastructure · Ryzen 9 9950X3D
+              Infrastructure premium · Ryzen 9 9950X3D
             </div>
             <h1 className="max-w-5xl text-5xl font-black leading-[0.95] text-white md:text-7xl xl:text-[5.5rem]">
-              Premium Minecraft hosting with serious hardware, calmer operations and real human support.
+              Hébergement Minecraft premium conçu pour vendre la performance, la stabilité et la confiance.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              Built for communities that want more than a cheap panel and a generic support queue. This is a cleaner, more premium hosting experience with room to grow.
+              Une offre pensée pour les communautés, serveurs privés et projets plus ambitieux qui veulent un matériel sérieux, une image haut de gamme et un service capable d’évoluer proprement.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#offers" className="cta-primary">View plans</a>
-              <a href="#comparison" className="cta-secondary">See the difference</a>
+              <a href="#offers" className="cta-primary">Voir les offres</a>
+              <a href="#comparison" className="cta-secondary">Voir la différence</a>
             </div>
 
             <div className="mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Hardware focus</div>
+                <div className="text-sm text-slate-400">Matériel mis en avant</div>
                 <div className="mt-2 text-xl font-bold text-white">Ryzen 9 9950X3D</div>
               </div>
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Storage</div>
-                <div className="mt-2 text-xl font-bold text-white">Fast NVMe</div>
+                <div className="text-sm text-slate-400">Stockage</div>
+                <div className="mt-2 text-xl font-bold text-white">NVMe rapide</div>
               </div>
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Operating style</div>
-                <div className="mt-2 text-xl font-bold text-white">Premium, clean, serious</div>
+                <div className="text-sm text-slate-400">Style d’exploitation</div>
+                <div className="mt-2 text-xl font-bold text-white">Premium, propre, sérieux</div>
               </div>
             </div>
           </div>
@@ -181,10 +181,10 @@ export default function Page() {
             <div className="glass-card relative overflow-hidden p-6 shadow-glow md:p-8">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(90,168,255,0.18),transparent_30%)]" />
               <div className="relative">
-                <div className="text-sm uppercase tracking-[0.3em] text-slate-400">Premium sales angle</div>
-                <h2 className="mt-4 text-3xl font-bold text-white">Not the cheapest host. Built to feel more stable, more serious and easier to trust.</h2>
+                <div className="text-sm uppercase tracking-[0.3em] text-slate-400">Offre premium boutique</div>
+                <h2 className="mt-4 text-3xl font-bold text-white">Pas l’option la moins chère. L’option qui donne à votre serveur une base plus propre et plus crédible.</h2>
                 <p className="mt-4 leading-7 text-slate-300">
-                  The page leans into premium boutique hosting: better perception, better support language, stronger trust cues and a hardware story that reinforces the offer instead of replacing it.
+                  Le site est pensé comme une vraie page de vente de serveurs : des offres lisibles, une hiérarchie claire, un matériel mis en avant avec sérieux et une promesse commerciale qui rassure immédiatement.
                 </p>
 
                 <div className="mt-8 space-y-4">
@@ -205,20 +205,20 @@ export default function Page() {
         <div className="section-shell">
           <div className="glass-card grid gap-6 p-6 md:grid-cols-4 md:p-8">
             <div>
-              <div className="text-sm text-slate-400">Promise</div>
-              <div className="mt-2 text-lg font-semibold text-white">Cleaner performance with room to grow</div>
+              <div className="text-sm text-slate-400">Performance</div>
+              <div className="mt-2 text-lg font-semibold text-white">Des ressources propres pour une meilleure fluidité</div>
             </div>
             <div>
               <div className="text-sm text-slate-400">Support</div>
-              <div className="mt-2 text-lg font-semibold text-white">Human help instead of generic replies</div>
+              <div className="mt-2 text-lg font-semibold text-white">Un accompagnement humain quand il faut avancer vite</div>
             </div>
             <div>
-              <div className="text-sm text-slate-400">Sales angle</div>
-              <div className="mt-2 text-lg font-semibold text-white">Premium service, not price war hosting</div>
+              <div className="text-sm text-slate-400">Positionnement</div>
+              <div className="mt-2 text-lg font-semibold text-white">Une offre premium pensée pour inspirer confiance</div>
             </div>
             <div>
-              <div className="text-sm text-slate-400">Launch path</div>
-              <div className="mt-2 text-lg font-semibold text-white">Simple start, clear next step later</div>
+              <div className="text-sm text-slate-400">Évolution</div>
+              <div className="mt-2 text-lg font-semibold text-white">Une base claire pour grandir sans friction</div>
             </div>
           </div>
         </div>
@@ -227,10 +227,10 @@ export default function Page() {
       <section id="offers" className="relative z-10 py-24">
         <div className="section-shell">
           <div className="max-w-3xl">
-            <div className="text-sm uppercase tracking-[0.35em] text-primary">Plans</div>
-            <h2 className="section-title mt-4">Start with a clean setup. Upgrade only when your server really needs it.</h2>
+            <div className="text-sm uppercase tracking-[0.35em] text-primary">Nos offres</div>
+            <h2 className="section-title mt-4">Des formules pensées pour vendre de vrais serveurs, pas juste des chiffres.</h2>
             <p className="section-copy mt-5">
-              A premium offer does not need ten confusing plans. It needs a structure that feels clear, scalable and reassuring for people who care about long-term server quality.
+              Chaque offre est construite pour être lisible, crédible et simple à comparer. L’objectif est de permettre au visiteur de se projeter immédiatement sur la bonne formule selon son type de serveur.
             </p>
           </div>
 
@@ -243,7 +243,7 @@ export default function Page() {
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-accentSoft" />
                 {offer.featured ? (
                   <div className="mb-4 inline-flex w-fit rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white">
-                    Most balanced
+                    Recommandé
                   </div>
                 ) : null}
                 <h3 className="text-2xl font-bold text-white">{offer.name}</h3>
@@ -255,10 +255,10 @@ export default function Page() {
                   <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">{offer.cores}</div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">{offer.ram}</div>
                   <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">{offer.storage}</div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Human support & clean upgrades</div>
+                  <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">Support humain & évolution simple</div>
                 </div>
 
-                <a href="#contact" className="cta-primary mt-8">Choose this plan</a>
+                <a href="#contact" className="cta-primary mt-8">Commander cette offre</a>
               </article>
             ))}
           </div>
@@ -269,19 +269,19 @@ export default function Page() {
         <div className="section-shell">
           <div className="glass-card overflow-hidden p-8 md:p-10">
             <div className="max-w-3xl">
-              <div className="text-sm uppercase tracking-[0.35em] text-primary">Comparison</div>
-              <h2 className="section-title mt-4">A premium host should feel different before the customer even checks out.</h2>
+              <div className="text-sm uppercase tracking-[0.35em] text-primary">Pourquoi cette offre se démarque</div>
+              <h2 className="section-title mt-4">Un vrai site de vente de serveurs doit montrer tout de suite pourquoi l’offre mérite son prix.</h2>
               <p className="section-copy mt-5">
-                This is the positioning difference: not cheaper, but cleaner. Not louder, but more trustworthy. Not overloaded with gimmicks, but easier to understand and easier to grow with.
+                Ici, la différence ne se joue pas uniquement sur les ressources affichées. Elle se joue sur la perception, la qualité d’exploitation, la lisibilité de l’offre et la confiance dégagée par l’ensemble du service.
               </p>
             </div>
 
             <div className="mt-10 overflow-x-auto">
               <div className="min-w-[720px] rounded-3xl border border-white/10 bg-white/5">
                 <div className="grid grid-cols-[0.9fr_1fr_1fr] border-b border-white/10 text-sm uppercase tracking-[0.2em] text-slate-400">
-                  <div className="p-5">Area</div>
-                  <div className="border-l border-white/10 p-5 text-white">Premium approach</div>
-                  <div className="border-l border-white/10 p-5">Typical budget host</div>
+                  <div className="p-5">Critère</div>
+                  <div className="border-l border-white/10 p-5 text-white">Approche premium</div>
+                  <div className="border-l border-white/10 p-5">Host budget classique</div>
                 </div>
                 {comparison.map((row) => (
                   <div key={row.label} className="grid grid-cols-[0.9fr_1fr_1fr] border-b border-white/10 last:border-b-0">
@@ -299,17 +299,17 @@ export default function Page() {
       <section id="advantages" className="relative z-10 py-24">
         <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <div className="text-sm uppercase tracking-[0.35em] text-primary">Why this premium angle works</div>
-            <h2 className="section-title mt-4">A stronger offer for buyers who care more about reliability than cheap pricing.</h2>
+            <div className="text-sm uppercase tracking-[0.35em] text-primary">L’ADN de l’offre</div>
+            <h2 className="section-title mt-4">Une proposition plus forte pour les joueurs et communautés qui veulent un serveur traité sérieusement.</h2>
             <p className="section-copy mt-5">
-              The point is not to attract everyone. The point is to attract server owners, communities and modded projects that want cleaner operations, more trust and a host that feels more involved.
+              Le but n’est pas de parler à tout le marché. Le but est d’attirer les clients qui recherchent une vraie base technique, une image propre et une prestation capable d’accompagner un serveur dans le temps.
             </p>
 
             <div className="glass-card mt-8 p-6 md:p-8">
-              <div className="text-sm uppercase tracking-[0.3em] text-slate-400">Hardware credibility</div>
+              <div className="text-sm uppercase tracking-[0.3em] text-slate-400">Crédibilité matérielle</div>
               <div className="mt-3 text-3xl font-bold text-white">Ryzen 9 9950X3D + NVMe</div>
               <p className="mt-4 leading-7 text-slate-300">
-                The hardware is a proof point. It shows the service is built on serious foundations, with performance headroom and a more premium operating philosophy behind it.
+                Le matériel est une preuve. Il montre que le service repose sur des bases sérieuses, avec de la marge de performance et une vraie logique premium derrière l’exploitation.
               </p>
             </div>
           </div>
@@ -328,10 +328,10 @@ export default function Page() {
       <section className="relative z-10 py-24">
         <div className="section-shell grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="glass-card p-8 md:p-10">
-            <div className="text-sm uppercase tracking-[0.35em] text-primary">Proof & trust</div>
-            <h2 className="section-title mt-4">Trust cues that make premium believable.</h2>
+            <div className="text-sm uppercase tracking-[0.35em] text-primary">Preuves & confiance</div>
+            <h2 className="section-title mt-4">Des éléments concrets qui donnent au site une vraie force commerciale.</h2>
             <p className="section-copy mt-5">
-              Premium hosting is not just a design style. It needs visible operational signals that tell the buyer this service is cared for, structured properly and ready to support a serious server.
+              Un site qui vend des serveurs doit inspirer confiance sans surjouer. Les bonnes preuves, les bons signaux et la bonne présentation rendent l’offre plus crédible et plus désirable dès les premières secondes.
             </p>
             <div className="mt-8 grid gap-4">
               {trust.map((item) => (
@@ -344,10 +344,10 @@ export default function Page() {
 
           <div className="glass-card grid gap-8 p-8 md:p-10">
             <div>
-              <div className="text-sm uppercase tracking-[0.35em] text-primary">Onboarding & trust</div>
-              <h2 className="section-title mt-4">Made to reduce buying friction.</h2>
+              <div className="text-sm uppercase tracking-[0.35em] text-primary">Accompagnement & confiance</div>
+              <h2 className="section-title mt-4">Pensé pour faciliter la décision et donner envie de commander.</h2>
               <p className="section-copy mt-5">
-                Premium only works if the customer feels guided. That means clear plans, migration help, backup language that feels concrete and support that sounds human from the first message.
+                Un bon site de vente de serveurs doit rassurer vite. Cela passe par des offres compréhensibles, une aide à la migration, des arguments concrets et un discours qui montre immédiatement le sérieux du service.
               </p>
             </div>
 
@@ -367,7 +367,7 @@ export default function Page() {
           <div className="glass-card p-8 md:p-10">
             <div className="max-w-3xl">
               <div className="text-sm uppercase tracking-[0.35em] text-primary">FAQ</div>
-              <h2 className="section-title mt-4">Answers for the objections premium buyers actually have.</h2>
+              <h2 className="section-title mt-4">Les réponses aux vraies objections d’un acheteur premium.</h2>
             </div>
 
             <div className="mt-10 grid gap-4">
@@ -387,30 +387,30 @@ export default function Page() {
           <div className="glass-card grid gap-8 p-8 md:grid-cols-[1fr_1fr] md:p-10">
             <div>
               <div className="text-sm uppercase tracking-[0.35em] text-primary">Contact</div>
-              <h2 className="section-title mt-4">Ready to turn this into a real premium brand?</h2>
+              <h2 className="section-title mt-4">Prêt à transformer cette base en vraie marque d’hébergement ?</h2>
               <p className="section-copy mt-5">
-                This version is built to sell the right positioning first. The brand name, Discord and email can be added later without changing the overall premium sales structure.
+                Cette version pose déjà le bon décor : une vraie page de vente orientée serveur, un ton premium et une structure pensée pour convaincre. Le nom, le Discord et les contacts pourront venir juste après.
               </p>
 
               <div className="mt-8 space-y-4 text-slate-200">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Brand name: placeholder for now</div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Discord: to be added later</div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Email: to be added later</div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Nom de marque : placeholder pour l’instant</div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Discord : à ajouter plus tard</div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">Email : à ajouter plus tard</div>
               </div>
             </div>
 
             <div className="glass-card border-white/10 bg-white/5 p-6">
-              <div className="text-xl font-bold text-white">Ready for Git / Vercel</div>
+              <div className="text-xl font-bold text-white">Prêt pour Git / Vercel</div>
               <div className="mt-6 space-y-4 text-slate-200">
-                <div className="rounded-2xl border border-white/10 px-4 py-4">1. Finalize the placeholder brand later</div>
-                <div className="rounded-2xl border border-white/10 px-4 py-4">2. Add real Discord, contact path and final assets</div>
-                <div className="rounded-2xl border border-white/10 px-4 py-4">3. Push to Git and import into Vercel</div>
-                <div className="rounded-2xl border border-white/10 px-4 py-4">4. Add checkout, email flows and stronger social proof later</div>
+                <div className="rounded-2xl border border-white/10 px-4 py-4">1. Finaliser plus tard le nom de marque</div>
+                <div className="rounded-2xl border border-white/10 px-4 py-4">2. Ajouter le vrai Discord, le contact et les visuels finaux</div>
+                <div className="rounded-2xl border border-white/10 px-4 py-4">3. Pousser les prochaines modifs sur Git et laisser Vercel redéployer</div>
+                <div className="rounded-2xl border border-white/10 px-4 py-4">4. Ajouter ensuite checkout, emails et preuve sociale plus forte</div>
               </div>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a href="#offers" className="cta-primary">View plans</a>
-                <a href="#home" className="cta-secondary">Back to top</a>
+                <a href="#offers" className="cta-primary">Voir les offres</a>
+                <a href="#home" className="cta-secondary">Retour en haut</a>
               </div>
             </div>
           </div>
