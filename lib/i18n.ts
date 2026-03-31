@@ -13,182 +13,151 @@ export const dictionary = {
     meta: {
       title: "FALCONHOST — Premium Minecraft Hosting",
       description:
-        "Premium Minecraft hosting for communities that want stability, clear scaling, and real human support.",
+        "Premium Minecraft hosting with clean resources, daily backups, and real human support.",
     },
     nav: {
       offers: "Plans",
       why: "Why choose us",
-      advantage: "Premium advantage",
+      support: "Support",
       faq: "FAQ",
       contact: "Contact",
       secondaryCta: "Talk about your server",
-    },
-    language: {
-      label: "Language",
-      en: "EN",
-      fr: "FR",
     },
     hero: {
       badge: "Ryzen 9 9950X3D · NVMe · Human support · Daily backups",
       title:
         "Premium Minecraft hosting for communities that want stability and real support.",
       subtitle:
-        "Clean resources, daily backups, responsive human support, and an easy upgrade path as your server grows.",
+        "Clean resources, daily backups, and a simple path to grow.",
       primaryCta: "View plans",
       secondaryCta: "Talk about your server",
-      panelLabel: "Built for serious communities",
-      panelTitle:
-        "A smoother experience for players, and a clearer foundation for the admin.",
-      panelItems: [
-        {
-          label: "Performance",
-          text: "Modern hardware and well-managed resources for a more stable everyday experience.",
-        },
-        {
-          label: "Support",
-          text: "Real people available when you need help, guidance, or the right next step.",
-        },
-        {
-          label: "Growth",
-          text: "Upgrade cleanly as your player base expands, without rebuilding everything from scratch.",
-        },
-      ],
       highlights: ["Ryzen 9 9950X3D", "NVMe storage", "Human support", "Daily backups"],
     },
     offers: {
       eyebrow: "Plans",
-      title: "Four clear plans built around the way Minecraft servers actually grow.",
-      subtitle:
-        "Choose a starting point that fits your players, your plugins, and your ambitions — then scale up when you need to.",
+      title: "Choose the right plan for your server.",
       featured: "Most popular",
       cta: "Choose this plan",
       items: [
         {
           name: "Starter",
           price: "$15.99/mo",
-          fit: "A clean base for a private world, a small survival server, or an early community.",
+          fit: "For a private world or a small server.",
           specs: ["2 vCores", "4 GB RAM", "40 GB NVMe"],
           benefits: [
-            "Stable resources for a smooth vanilla or light plugin setup",
-            "Daily backups included from day one",
-            "Easy step up when your server needs more room",
+            "Stable for vanilla or light plugins",
+            "Daily backups included",
+            "Easy upgrade path",
           ],
         },
         {
           name: "Community",
           price: "$24.99/mo",
-          fit: "The right balance for active communities that need more headroom.",
+          fit: "For active servers that need more room.",
           specs: ["3 vCores", "6 GB RAM", "60 GB NVMe"],
           benefits: [
-            "More breathing room for plugins and regular player peaks",
-            "Responsive human support when you need to adjust",
-            "A stronger base for a growing public server",
+            "More headroom for regular player peaks",
+            "Responsive human support",
+            "Strong balance of power and value",
           ],
           featured: true,
         },
         {
           name: "Performance",
           price: "$34.99/mo",
-          fit: "For larger worlds, busier gameplay, and communities that expect consistency.",
+          fit: "For heavier worlds and busier gameplay.",
           specs: ["4 vCores", "8 GB RAM", "90 GB NVMe"],
           benefits: [
-            "More comfort under regular load",
-            "Better fit for heavier setups and larger maps",
-            "Simple upgrades as your server keeps growing",
+            "More comfort under load",
+            "Better for larger maps",
+            "Simple scaling as you grow",
           ],
         },
         {
           name: "Managed Modded",
           price: "$54.99/mo",
-          fit: "For modded servers, heavier configurations, and projects that need closer support.",
+          fit: "For modded servers and demanding setups.",
           specs: ["6 vCores", "12 GB RAM", "140 GB NVMe"],
           benefits: [
-            "More margin for modpacks and advanced server setups",
-            "Better support for technical and evolving needs",
-            "A plan designed to keep serious projects comfortable longer",
+            "More room for modpacks",
+            "Better fit for advanced needs",
+            "Built for long-term projects",
           ],
         },
       ],
     },
     why: {
       eyebrow: "Why choose us",
-      title: "A premium host should make your server easier to run — not harder to trust.",
+      title: "Built for admins. Better for players.",
       items: [
         {
-          title: "Cleanly allocated resources",
-          text: "We do not rely on aggressive overselling. The goal is simple: keep your server consistent, not overcrowded.",
+          title: "Clean resources",
+          text: "No aggressive overselling. Your server gets room to stay consistent.",
         },
         {
-          title: "Responsive human support",
-          text: "When you need help, you speak with someone who understands the admin side of Minecraft hosting and can guide you clearly.",
+          title: "Human support",
+          text: "Fast, clear help from someone who understands Minecraft hosting.",
         },
         {
           title: "Daily backups",
-          text: "World data matters. Daily backups are part of the baseline, not an optional extra hidden behind marketing.",
+          text: "Your world is backed up every day as a standard, not an add-on.",
         },
         {
           title: "Simple upgrades",
-          text: "As your community grows, you can move up cleanly without turning your server into a migration headache.",
+          text: "Move up cleanly as your community grows.",
         },
       ],
     },
-    advantage: {
-      eyebrow: "Premium advantage",
-      title: "Premium, for practical reasons.",
-      paragraphs: [
-        "FALCONHOST is built for admins who want a serious foundation for their server and a smoother experience for their community.",
-        "The premium difference is not just the CPU. It is the full package: better-kept resources, fast NVMe storage, daily backups, and real support when your project needs attention.",
-        "For players, that means a server that feels more dependable. For admins, it means less improvisation, better clarity, and an easier path as the server evolves.",
-      ],
-      steps: [
+    support: {
+      eyebrow: "How we support your server",
+      title: "Clear help, from setup to growth.",
+      items: [
         {
           step: "1",
-          title: "We look at your real project",
-          text: "Player count, plugin stack, modpack needs, and growth plans — we help you start with the right fit instead of guessing.",
+          title: "We size it properly",
+          text: "We help you choose the right plan for your players, plugins, and goals.",
         },
         {
           step: "2",
-          title: "We set a clean foundation",
-          text: "You start on serious hardware with a clear structure designed to keep the server stable from the beginning.",
+          title: "We keep it clean",
+          text: "Serious hardware, fast storage, and a setup built for stability.",
         },
         {
           step: "3",
-          title: "We stay available as you grow",
-          text: "Maps expand, plugins multiply, communities become more active. We help you adjust at the right time, before things become messy.",
+          title: "We help you scale",
+          text: "When your server grows, you can upgrade without starting over.",
         },
       ],
     },
     faq: {
       eyebrow: "FAQ",
-      title: "Answers to the questions that matter before you choose.",
+      title: "Questions, answered.",
       items: [
         {
           q: "Why are you more expensive than a budget host?",
-          a: "Because the offer is different. You are paying for better-kept resources, cleaner operations, daily backups, and real support that follows your project instead of treating it like a ticket number.",
+          a: "Because you are paying for cleaner resource allocation, daily backups, and real support — not just a low entry price.",
         },
         {
           q: "Is this suitable for modded servers?",
-          a: "Yes. Performance works well for lighter or mid-range modded setups, while Managed Modded is designed for heavier packs and projects that need more room and closer support.",
+          a: "Yes. Performance fits lighter modded setups. Managed Modded is built for heavier packs and more demanding projects.",
         },
         {
           q: "What happens if my server grows?",
-          a: "You move to a higher plan cleanly. The idea is to let your server scale without forcing you into a painful rebuild too early.",
+          a: "You move to a higher plan cleanly, without having to rebuild everything too early.",
         },
         {
           q: "How do I get help quickly?",
-          a: "Discord is the fastest route. You can also email us or use the contact form if you want to discuss a migration, a new setup, or the right plan for your project.",
+          a: "Discord is the fastest way to reach us. Email works too for projects and migrations.",
         },
       ],
     },
     contact: {
       eyebrow: "Contact",
       title: "Talk to us about your server.",
-      subtitle:
-        "If you are choosing between plans, preparing a migration, or building a modded setup, we can point you toward the right starting point.",
+      subtitle: "For plan advice, migrations, or modded setups, we can help.",
       cards: [
         { label: "Discord", value: "discord.gg/falconhost" },
         { label: "Email", value: "contact@falconhost.gg" },
-        { label: "Response", value: "Fast replies for project, upgrade, and migration requests" },
       ],
       formTitle: "Tell us about your project",
       fields: {
@@ -200,15 +169,13 @@ export const dictionary = {
       placeholders: {
         name: "Your name",
         email: "you@example.com",
-        serverType: "Survival, minigames, modded, private community...",
-        message:
-          "Tell us about your server, your player count, your plugin stack, or your migration needs.",
+        serverType: "Survival, minigames, modded...",
+        message: "Tell us about your server and what you need.",
       },
       submit: "Send request",
     },
     footer: {
-      tagline:
-        "Premium Minecraft hosting for servers that need a clean, stable, and well-supported foundation.",
+      tagline: "Premium Minecraft hosting with clean resources and real support.",
       summary: "Ryzen 9 9950X3D · NVMe · Human support · Daily backups",
       contact: "Discord: discord.gg/falconhost · contact@falconhost.gg",
     },
@@ -217,182 +184,151 @@ export const dictionary = {
     meta: {
       title: "FALCONHOST — Hébergement Minecraft premium",
       description:
-        "Un hébergement Minecraft premium pour les communautés qui veulent de la stabilité, une montée en gamme claire et un vrai support humain.",
+        "Un hébergement Minecraft premium avec des ressources propres, des sauvegardes quotidiennes et un vrai support humain.",
     },
     nav: {
       offers: "Offres",
       why: "Pourquoi nous choisir",
-      advantage: "Notre avantage",
+      support: "Accompagnement",
       faq: "FAQ",
       contact: "Contact",
       secondaryCta: "Parler de votre serveur",
-    },
-    language: {
-      label: "Langue",
-      en: "EN",
-      fr: "FR",
     },
     hero: {
       badge: "Ryzen 9 9950X3D · NVMe · Support humain · Sauvegardes quotidiennes",
       title:
         "Hébergement Minecraft premium pour les communautés qui veulent de la stabilité et un vrai accompagnement.",
       subtitle:
-        "Des ressources propres, des sauvegardes quotidiennes, un support humain réactif et une évolution simple quand votre serveur grandit.",
+        "Des ressources propres, des sauvegardes quotidiennes et une montée en gamme simple.",
       primaryCta: "Voir les offres",
       secondaryCta: "Parler de votre serveur",
-      panelLabel: "Pensé pour les serveurs sérieux",
-      panelTitle:
-        "Une expérience plus fluide pour les joueurs, et une base plus claire pour l’admin.",
-      panelItems: [
-        {
-          label: "Performance",
-          text: "Un matériel moderne et des ressources mieux tenues pour une expérience plus stable au quotidien.",
-        },
-        {
-          label: "Support",
-          text: "Un vrai interlocuteur quand vous avez besoin d’aide, d’un conseil ou d’un ajustement.",
-        },
-        {
-          label: "Évolution",
-          text: "Une montée en gamme propre quand la communauté prend de l’ampleur, sans tout reconstruire.",
-        },
-      ],
       highlights: ["Ryzen 9 9950X3D", "Stockage NVMe", "Support humain", "Sauvegardes quotidiennes"],
     },
     offers: {
       eyebrow: "Offres",
-      title: "Quatre offres claires, pensées pour la vraie vie d’un serveur Minecraft.",
-      subtitle:
-        "Vous choisissez une base cohérente pour vos joueurs, vos plugins et votre rythme de croissance — puis vous évoluez simplement quand c’est nécessaire.",
+      title: "Choisissez la bonne offre pour votre serveur.",
       featured: "Le plus choisi",
       cta: "Choisir cette offre",
       items: [
         {
           name: "Starter",
           price: "$15.99/mo",
-          fit: "Une base propre pour un monde privé, une survie entre amis ou le lancement d’une petite communauté.",
+          fit: "Pour un monde privé ou un petit serveur.",
           specs: ["2 vCores", "4 Go RAM", "40 Go NVMe"],
           benefits: [
-            "Des ressources stables pour une configuration vanilla ou légère",
-            "Sauvegardes quotidiennes incluses dès le départ",
-            "Montée en gamme simple quand le serveur a besoin de plus d’espace",
+            "Stable pour du vanilla ou des plugins légers",
+            "Sauvegardes quotidiennes incluses",
+            "Montée en gamme simple",
           ],
         },
         {
           name: "Community",
           price: "$24.99/mo",
-          fit: "Le bon équilibre pour une communauté active qui a besoin d’un peu plus de marge.",
+          fit: "Pour les serveurs actifs qui ont besoin de marge.",
           specs: ["3 vCores", "6 Go RAM", "60 Go NVMe"],
           benefits: [
-            "Plus d’aisance pour les plugins et les pics de fréquentation",
-            "Support humain réactif quand il faut ajuster",
-            "Une base plus solide pour un serveur public en croissance",
+            "Plus d’aisance en cas de pics réguliers",
+            "Support humain réactif",
+            "Excellent équilibre entre puissance et valeur",
           ],
           featured: true,
         },
         {
           name: "Performance",
           price: "$34.99/mo",
-          fit: "Pour les mondes plus lourds, un gameplay plus dense et des communautés qui attendent de la régularité.",
+          fit: "Pour les mondes plus lourds et un gameplay plus dense.",
           specs: ["4 vCores", "8 Go RAM", "90 Go NVMe"],
           benefits: [
-            "Davantage de confort sous charge régulière",
-            "Mieux adapté aux configurations plus exigeantes",
-            "Évolution simple si le serveur continue de grandir",
+            "Plus de confort sous charge",
+            "Mieux adapté aux grandes maps",
+            "Évolution simple dans le temps",
           ],
         },
         {
           name: "Managed Modded",
           price: "$54.99/mo",
-          fit: "Pour les serveurs moddés, les configurations plus lourdes et les projets qui demandent un suivi plus proche.",
+          fit: "Pour les serveurs moddés et les setups exigeants.",
           specs: ["6 vCores", "12 Go RAM", "140 Go NVMe"],
           benefits: [
-            "Plus de marge pour les modpacks et setups avancés",
-            "Un accompagnement plus adapté aux besoins techniques",
-            "Une offre pensée pour garder les projets sérieux confortables plus longtemps",
+            "Plus de marge pour les modpacks",
+            "Mieux adapté aux besoins avancés",
+            "Pensé pour les projets durables",
           ],
         },
       ],
     },
     why: {
       eyebrow: "Pourquoi nous choisir",
-      title: "Un hébergeur premium doit vous simplifier la gestion du serveur, pas compliquer la confiance.",
+      title: "Pensé pour l’admin. Meilleur pour les joueurs.",
       items: [
         {
           title: "Ressources propres",
-          text: "Nous évitons l’oversell agressif. Le but est simple : garder un serveur cohérent, pas empiler les instances sur la même machine.",
+          text: "Pas d’oversell agressif. Votre serveur garde de l’espace pour rester cohérent.",
         },
         {
-          title: "Support humain réactif",
-          text: "Quand vous avez besoin d’aide, vous échangez avec quelqu’un qui comprend la réalité d’un admin Minecraft et peut vous guider clairement.",
+          title: "Support humain",
+          text: "Une aide claire et rapide par quelqu’un qui comprend l’hébergement Minecraft.",
         },
         {
           title: "Sauvegardes quotidiennes",
-          text: "Les données de votre monde comptent. Les sauvegardes quotidiennes font partie de la base, pas d’une option marketing ajoutée au dernier moment.",
+          text: "Votre monde est sauvegardé chaque jour, sans option cachée.",
         },
         {
           title: "Montée en gamme simple",
-          text: "Quand votre communauté grossit, vous pouvez évoluer proprement sans transformer votre serveur en chantier de migration.",
+          text: "Vous évoluez proprement quand votre communauté grandit.",
         },
       ],
     },
-    advantage: {
-      eyebrow: "Notre avantage",
-      title: "Premium, pour des raisons concrètes.",
-      paragraphs: [
-        "FALCONHOST s’adresse aux admins qui veulent une base sérieuse pour leur serveur et une expérience plus propre pour leur communauté.",
-        "La différence premium ne tient pas seulement au processeur. Elle tient à l’ensemble : des ressources mieux tenues, du stockage NVMe rapide, des sauvegardes quotidiennes et un vrai support quand votre projet demande de l’attention.",
-        "Pour les joueurs, cela veut dire un serveur plus fiable au quotidien. Pour l’admin, cela veut dire moins d’improvisation, plus de clarté et une évolution plus simple dans le temps.",
-      ],
-      steps: [
+    support: {
+      eyebrow: "Comment on accompagne votre serveur",
+      title: "Un accompagnement clair, du lancement à la montée en charge.",
+      items: [
         {
           step: "1",
-          title: "On regarde votre projet réel",
-          text: "Nombre de joueurs, pile de plugins, besoins moddés, ambitions de croissance : on vous aide à partir sur la bonne base au lieu de vous laisser deviner.",
+          title: "On calibre la bonne offre",
+          text: "On vous aide à choisir selon vos joueurs, vos plugins et vos objectifs.",
         },
         {
           step: "2",
-          title: "On pose une base propre",
-          text: "Vous démarrez sur un matériel sérieux, avec une structure claire pensée pour garder le serveur stable dès le début.",
+          title: "On garde une base propre",
+          text: "Matériel sérieux, stockage rapide et environnement pensé pour la stabilité.",
         },
         {
           step: "3",
-          title: "On reste là quand ça évolue",
-          text: "Une map s’alourdit, les plugins s’accumulent, la communauté devient plus active. On vous aide à ajuster au bon moment, avant que ça se complique.",
+          title: "On vous aide à évoluer",
+          text: "Quand le serveur grossit, vous pouvez monter en gamme sans repartir de zéro.",
         },
       ],
     },
     faq: {
       eyebrow: "FAQ",
-      title: "Les réponses aux questions qui comptent avant de choisir.",
+      title: "Les réponses essentielles.",
       items: [
         {
           q: "Pourquoi êtes-vous plus cher qu’un host budget ?",
-          a: "Parce que l’offre n’a pas le même objectif. Ici, vous payez pour des ressources mieux tenues, une exploitation plus propre, des sauvegardes quotidiennes et un support humain qui suit réellement votre projet.",
+          a: "Parce que vous payez des ressources mieux tenues, des sauvegardes quotidiennes et un vrai support — pas seulement un prix d’entrée bas.",
         },
         {
           q: "Est-ce adapté aux serveurs moddés ?",
-          a: "Oui. Performance convient bien aux setups moddés légers à intermédiaires, tandis que Managed Modded est pensé pour les packs plus lourds et les projets qui demandent davantage de marge et de suivi.",
+          a: "Oui. Performance convient aux setups moddés légers. Managed Modded est prévu pour les packs plus lourds et les projets plus exigeants.",
         },
         {
           q: "Que se passe-t-il si mon serveur grandit ?",
-          a: "Vous passez simplement sur une offre supérieure. L’idée est de laisser votre serveur évoluer sans vous forcer trop tôt dans une reconstruction pénible.",
+          a: "Vous passez sur une offre supérieure proprement, sans devoir tout reconstruire trop tôt.",
         },
         {
           q: "Comment obtenir de l’aide rapidement ?",
-          a: "Discord reste le canal le plus direct. Vous pouvez aussi nous écrire par email ou utiliser le formulaire si vous voulez parler migration, nouvelle installation ou choix d’offre.",
+          a: "Discord reste le moyen le plus rapide. L’email fonctionne aussi pour les projets et migrations.",
         },
       ],
     },
     contact: {
       eyebrow: "Contact",
       title: "Parlez-nous de votre serveur.",
-      subtitle:
-        "Si vous hésitez entre deux offres, si vous préparez une migration ou si vous montez un projet moddé, on peut vous orienter vers une base cohérente.",
+      subtitle: "Pour une offre, une migration ou un projet moddé, on vous répond vite.",
       cards: [
         { label: "Discord", value: "discord.gg/falconhost" },
         { label: "Email", value: "contact@falconhost.gg" },
-        { label: "Réponse", value: "Retour rapide pour les projets, upgrades et migrations" },
       ],
       formTitle: "Présentez votre projet",
       fields: {
@@ -404,15 +340,13 @@ export const dictionary = {
       placeholders: {
         name: "Votre nom",
         email: "vous@exemple.com",
-        serverType: "Survie, mini-jeux, moddé, communauté privée...",
-        message:
-          "Parlez-nous de votre serveur, du nombre de joueurs, de vos plugins ou de votre besoin de migration.",
+        serverType: "Survie, mini-jeux, moddé...",
+        message: "Parlez-nous de votre serveur et de votre besoin.",
       },
       submit: "Envoyer la demande",
     },
     footer: {
-      tagline:
-        "Un hébergement Minecraft premium pour les serveurs qui ont besoin d’une base propre, stable et bien suivie.",
+      tagline: "Un hébergement Minecraft premium avec des ressources propres et un vrai support.",
       summary: "Ryzen 9 9950X3D · NVMe · Support humain · Sauvegardes quotidiennes",
       contact: "Discord : discord.gg/falconhost · contact@falconhost.gg",
     },
