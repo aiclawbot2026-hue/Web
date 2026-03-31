@@ -49,6 +49,7 @@ export const dictionary = {
             "Daily backups included",
             "Easy upgrade path",
           ],
+          featured: false,
         },
         {
           name: "Community",
@@ -72,6 +73,7 @@ export const dictionary = {
             "Better for larger maps",
             "Simple scaling as you grow",
           ],
+          featured: false,
         },
         {
           name: "Managed Modded",
@@ -83,6 +85,7 @@ export const dictionary = {
             "Better fit for advanced needs",
             "Built for long-term projects",
           ],
+          featured: false,
         },
       ],
     },
@@ -220,6 +223,7 @@ export const dictionary = {
             "Sauvegardes quotidiennes incluses",
             "Montée en gamme simple",
           ],
+          featured: false,
         },
         {
           name: "Community",
@@ -243,6 +247,7 @@ export const dictionary = {
             "Mieux adapté aux grandes maps",
             "Évolution simple dans le temps",
           ],
+          featured: false,
         },
         {
           name: "Managed Modded",
@@ -254,6 +259,7 @@ export const dictionary = {
             "Mieux adapté aux besoins avancés",
             "Pensé pour les projets durables",
           ],
+          featured: false,
         },
       ],
     },
