@@ -4,7 +4,7 @@ type Item = {
 };
 
 type Props = {
-  items: Item[];
+  items: readonly Item[];
 };
 
 export function FaqAccordion({ items }: Props) {
