@@ -147,7 +147,7 @@ export default function Page() {
     <main className="relative overflow-hidden bg-[#050b14] text-white">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+        style={{ backgroundImage: "url('/hero-bg-generated.png')" }}
       />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,9,18,0.78)_0%,rgba(8,15,28,0.48)_36%,rgba(5,10,18,0.76)_100%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,140,255,0.12),transparent_32%)]" />
