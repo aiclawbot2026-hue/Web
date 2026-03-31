@@ -146,11 +146,11 @@ export default function Page() {
   return (
     <main className="relative overflow-hidden bg-[#050b14] text-white">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero-bg-generated.png')" }}
+        className="absolute inset-0 bg-cover bg-[center_right] bg-no-repeat"
+        style={{ backgroundImage: "url('/hero-bg-generated-v2.png')" }}
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,9,18,0.78)_0%,rgba(8,15,28,0.48)_36%,rgba(5,10,18,0.76)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,140,255,0.12),transparent_32%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,8,16,0.88)_0%,rgba(6,12,24,0.56)_38%,rgba(4,8,16,0.82)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_35%,rgba(99,140,255,0.18),transparent_28%)]" />
       <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:48px_48px,48px_48px]" />
       <div className="absolute left-[-10%] top-[12%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
       <div className="absolute right-[-8%] top-[32%] h-80 w-80 rounded-full bg-accent/15 blur-3xl" />
@@ -176,18 +176,18 @@ export default function Page() {
       <section id="home" className="relative z-10">
         <div className="section-shell grid min-h-[92vh] items-center gap-12 py-20 md:grid-cols-[1.15fr_0.85fr] md:py-28">
           <div>
-            <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm text-primary shadow-glow">
-              Infrastructure premium · Ryzen 9 9950X3D
+            <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm text-primary shadow-glow backdrop-blur-md">
+              Infrastructure premium · Ryzen 9 9950X3D · NVMe
             </div>
-            <h1 className="max-w-5xl text-5xl font-black leading-[0.95] text-white md:text-7xl xl:text-[5.5rem]">
-              Hébergement Minecraft premium conçu pour vendre la performance, la stabilité et la confiance.
+            <h1 className="max-w-5xl text-5xl font-black leading-[0.92] text-white md:text-7xl xl:text-[5.5rem]">
+              Donnez à votre serveur Minecraft une infrastructure à la hauteur de votre ambition.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              Une offre pensée pour les communautés, serveurs privés et projets plus ambitieux qui veulent un matériel sérieux, une image haut de gamme et un service capable d’évoluer proprement.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">
+              Une expérience premium pensée pour vendre la stabilité, la performance et la confiance, avec un matériel sérieux, une image haut de gamme et un service capable d’accompagner votre serveur dans la durée.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a href="#offers" className="cta-primary">Voir les offres</a>
+              <a href="#offers" className="cta-primary">Commander un serveur</a>
               <a href="#comparison" className="cta-secondary">Comparer les offres</a>
             </div>
 
@@ -201,16 +201,16 @@ export default function Page() {
 
             <div className="mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Processeur mis en avant</div>
+                <div className="text-sm text-slate-400">Processeur</div>
                 <div className="mt-2 text-xl font-bold text-white">Ryzen 9 9950X3D</div>
               </div>
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Stockage serveur</div>
-                <div className="mt-2 text-xl font-bold text-white">NVMe rapide</div>
+                <div className="text-sm text-slate-400">Stockage</div>
+                <div className="mt-2 text-xl font-bold text-white">NVMe haute vitesse</div>
               </div>
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Qualité de service</div>
-                <div className="mt-2 text-xl font-bold text-white">Premium, propre, sérieux</div>
+                <div className="text-sm text-slate-400">Positionnement</div>
+                <div className="mt-2 text-xl font-bold text-white">Hosting premium</div>
               </div>
             </div>
           </div>
@@ -221,9 +221,9 @@ export default function Page() {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,122,24,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(90,168,255,0.18),transparent_30%)]" />
               <div className="relative">
                 <div className="text-sm uppercase tracking-[0.3em] text-slate-400">Offre premium boutique</div>
-                <h2 className="mt-4 text-3xl font-bold text-white">Pas l’option la moins chère. L’option qui donne à votre serveur une base plus propre et plus crédible.</h2>
-                <p className="mt-4 leading-7 text-slate-300">
-                  Le site est pensé comme une vraie page de vente de serveurs : des offres lisibles, une hiérarchie claire, un matériel mis en avant avec sérieux et une promesse commerciale qui rassure immédiatement.
+                <h2 className="mt-4 text-3xl font-bold text-white">Une page d’accueil pensée pour vendre des serveurs, pas juste afficher des specs.</h2>
+                <p className="mt-4 leading-7 text-slate-200">
+                  Offres lisibles, matériel haut de gamme, sensation de maîtrise et promesse commerciale claire : tout le hero est maintenant aligné pour faire ressentir une offre sérieuse dès l’arrivée.
                 </p>
 
                 <div className="mt-8 space-y-4">
