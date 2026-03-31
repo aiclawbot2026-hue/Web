@@ -1,29 +1,46 @@
-# Minecraft Hosting Premium
+# FALCONHOST
 
-Premium US-market Minecraft hosting landing page built with Next.js and Tailwind, prepared for Vercel.
+Landing page premium bilingue (EN / FR) pour un hébergeur Minecraft, construite avec Next.js et Tailwind, prête pour Vercel.
 
-## Current direction
+## Ce qui est en place
 
-- premium boutique positioning
-- serious hardware story around Ryzen 9 9950X3D
-- pricing in USD
-- trust / comparison / FAQ sections
-- dark premium visual style inspired by gaming hosting mockups
+- design sombre premium et responsive
+- routes i18n propres : `/en` et `/fr`
+- redirection automatique depuis `/` via middleware
+- switcher de langue visible
+- pricing cards mises en avant
+- FAQ en accordion simple
+- section contact premium
 
-## Run locally
+## Lancer en local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Deploy to Vercel
+## Build production
 
-See `DEPLOY.md`.
+```bash
+npm run build
+```
 
-## Next improvements
+## Déploiement Vercel
 
-- final brand name
-- real contact / Discord links
-- final background visuals
-- checkout and stronger funnel later
+Voir `DEPLOY.md`.
+
+## Variables publiques recommandées
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://votre-domaine-ou-url-vercel
+NEXT_PUBLIC_DISCORD_URL=https://discord.gg/falconhost
+NEXT_PUBLIC_CONTACT_EMAIL=contact@falconhost.gg
+NEXT_PUBLIC_BRAND_NAME=FALCONHOST
+```
+
+## Pistes de suite
+
+- brancher le formulaire
+- ajouter SEO multilingue complet
+- connecter le domaine final
+- ajouter analytics si utile

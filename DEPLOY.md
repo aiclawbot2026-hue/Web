@@ -1,41 +1,72 @@
-# Git / Vercel deployment notes
+# Déploiement Vercel — FALCONHOST
 
-## 1. Initialize git if needed
+## Prérequis
 
-```bash
-git init
-git add .
-git commit -m "Initial premium Minecraft hosting landing page"
-```
+- dépôt GitHub déjà connecté à Vercel
+- branche principale : `main`
+- projet Next.js détecté automatiquement
 
-## 2. Push to GitHub / GitLab / Bitbucket
+## Variables d’environnement recommandées
 
-Create a repo, then:
+Ajoute ces variables dans **Vercel → Project Settings → Environment Variables** :
 
 ```bash
-git remote add origin <your-repo-url>
-git branch -M main
-git push -u origin main
+NEXT_PUBLIC_SITE_URL=https://votre-domaine-ou-url-vercel
+NEXT_PUBLIC_DISCORD_URL=https://discord.gg/falconhost
+NEXT_PUBLIC_CONTACT_EMAIL=contact@falconhost.gg
+NEXT_PUBLIC_BRAND_NAME=FALCONHOST
 ```
 
-## 3. Import in Vercel
+## Création du projet Vercel
 
-- New Project
-- Import the repository
-- Framework preset: Next.js
-- Build command: auto-detected
-- Output: auto-detected
+1. Ouvrir Vercel
+2. Cliquer sur **Add New → Project**
+3. Importer le repo GitHub `aiclawbot2026-hue/Web`
+4. Vérifier que le framework détecté est **Next.js**
+5. Laisser les réglages de build par défaut
+6. Ajouter les variables d’environnement ci-dessus
+7. Déployer
 
-## 4. Optional future env vars
+## Réglages recommandés après le premier déploiement
 
-- NEXT_PUBLIC_DISCORD_URL
-- NEXT_PUBLIC_CONTACT_EMAIL
-- NEXT_PUBLIC_BRAND_NAME
+### 1. Domaine
 
-## 5. Recommended next steps
+Dans **Settings → Domains** :
+- ajouter le domaine final si tu en as un
+- garder l’URL `.vercel.app` comme fallback
 
-- add final brand name
-- add real background visuals
-- add Discord/contact links
-- add domain
-- later: Stripe, forms, analytics, social proof
+### 2. Production branch
+
+Dans **Settings → Git** :
+- vérifier que la branche de production est bien `main`
+
+### 3. Fonctionnement i18n
+
+Le site fonctionne avec :
+- `/en` → anglais
+- `/fr` → français
+- `/` → redirection automatique selon la langue navigateur ou le cookie `falconhost_locale`
+
+### 4. Vérifications à faire après mise en ligne
+
+Tester :
+- l’arrivée sur `/` avec navigateur FR puis EN
+- le switcher `EN | FR`
+- les ancres `#offers`, `#why`, `#advantage`, `#faq`, `#contact`
+- l’affichage mobile
+- les performances Lighthouse
+
+## Commandes utiles en local
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+## Suite recommandée
+
+- brancher le formulaire sur Resend, Formspree ou un endpoint maison
+- ajouter les métadonnées SEO complètes par langue
+- connecter un vrai domaine
+- ajouter analytics si besoin
