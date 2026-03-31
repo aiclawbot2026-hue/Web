@@ -116,6 +116,32 @@ const trust = [
   "Une communication premium qui rend le service crédible dès les premières secondes",
 ];
 
+const infraBadges = [
+  "Ryzen 9 9950X3D",
+  "NVMe haute vitesse",
+  "Déploiement premium",
+  "Support humain",
+];
+
+const addons = [
+  {
+    name: "Sauvegardes renforcées",
+    text: "Pour les serveurs qui veulent une stratégie de sauvegarde encore plus rassurante.",
+  },
+  {
+    name: "Support prioritaire",
+    text: "Pour les clients qui veulent des réponses plus rapides et un suivi plus direct.",
+  },
+  {
+    name: "Accompagnement migration",
+    text: "Pour déplacer un serveur existant avec moins de friction et plus de sérénité.",
+  },
+  {
+    name: "Évolution RAM / stockage",
+    text: "Pour accompagner la croissance sans casser l’existant ni repartir de zéro.",
+  },
+];
+
 export default function Page() {
   return (
     <main className="relative overflow-hidden bg-[#050b14] text-white">
@@ -157,20 +183,28 @@ export default function Page() {
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a href="#offers" className="cta-primary">Voir les offres</a>
-              <a href="#comparison" className="cta-secondary">Voir la différence</a>
+              <a href="#comparison" className="cta-secondary">Comparer les offres</a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              {infraBadges.map((item) => (
+                <div key={item} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 backdrop-blur-md">
+                  {item}
+                </div>
+              ))}
             </div>
 
             <div className="mt-10 grid max-w-4xl gap-4 sm:grid-cols-3">
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Matériel mis en avant</div>
+                <div className="text-sm text-slate-400">Processeur mis en avant</div>
                 <div className="mt-2 text-xl font-bold text-white">Ryzen 9 9950X3D</div>
               </div>
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Stockage</div>
+                <div className="text-sm text-slate-400">Stockage serveur</div>
                 <div className="mt-2 text-xl font-bold text-white">NVMe rapide</div>
               </div>
               <div className="glass-card p-5">
-                <div className="text-sm text-slate-400">Style d’exploitation</div>
+                <div className="text-sm text-slate-400">Qualité de service</div>
                 <div className="mt-2 text-xl font-bold text-white">Premium, propre, sérieux</div>
               </div>
             </div>
@@ -219,6 +253,29 @@ export default function Page() {
             <div>
               <div className="text-sm text-slate-400">Évolution</div>
               <div className="mt-2 text-lg font-semibold text-white">Une base claire pour grandir sans friction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 pb-8">
+        <div className="section-shell">
+          <div className="grid gap-4 md:grid-cols-4">
+            <div className="glass-card p-5">
+              <div className="text-sm text-slate-400">Latence</div>
+              <div className="mt-2 text-xl font-bold text-white">Infrastructure orientée fluidité</div>
+            </div>
+            <div className="glass-card p-5">
+              <div className="text-sm text-slate-400">Backups</div>
+              <div className="mt-2 text-xl font-bold text-white">Sauvegardes quotidiennes</div>
+            </div>
+            <div className="glass-card p-5">
+              <div className="text-sm text-slate-400">Upgrade path</div>
+              <div className="mt-2 text-xl font-bold text-white">Évolution simple</div>
+            </div>
+            <div className="glass-card p-5">
+              <div className="text-sm text-slate-400">Support</div>
+              <div className="mt-2 text-xl font-bold text-white">Aide humaine</div>
             </div>
           </div>
         </div>
@@ -326,6 +383,27 @@ export default function Page() {
       </section>
 
       <section className="relative z-10 py-24">
+        <div className="section-shell">
+          <div className="mb-6 max-w-3xl">
+            <div className="text-sm uppercase tracking-[0.35em] text-primary">Options & services</div>
+            <h2 className="section-title mt-4">Une offre serveur qui peut évoluer avec votre projet.</h2>
+            <p className="section-copy mt-5">
+              Le site doit aussi montrer que le service n’est pas figé. Vous pouvez démarrer proprement, puis ajouter les options qui correspondent réellement à votre besoin.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {addons.map((item) => (
+              <div key={item.name} className="glass-card p-6">
+                <div className="text-xl font-bold text-white">{item.name}</div>
+                <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 py-24">
         <div className="section-shell grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="glass-card p-8 md:p-10">
             <div className="text-sm uppercase tracking-[0.35em] text-primary">Preuves & confiance</div>
@@ -382,6 +460,34 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="relative z-10 py-24">
+        <div className="section-shell">
+          <div className="glass-card grid gap-6 p-8 md:grid-cols-3 md:p-10">
+            <div>
+              <div className="text-sm uppercase tracking-[0.35em] text-primary">Infrastructure</div>
+              <div className="mt-3 text-2xl font-bold text-white">Base matérielle haut de gamme</div>
+              <p className="mt-4 leading-7 text-slate-300">
+                Une présentation pensée pour montrer que le service repose sur un matériel sérieux et une logique d’exploitation propre.
+              </p>
+            </div>
+            <div>
+              <div className="text-sm uppercase tracking-[0.35em] text-primary">Usage</div>
+              <div className="mt-3 text-2xl font-bold text-white">Survie, communauté, moddé</div>
+              <p className="mt-4 leading-7 text-slate-300">
+                Le site parle autant aux petits serveurs privés qu’aux projets plus ambitieux qui ont besoin d’une base plus rassurante.
+              </p>
+            </div>
+            <div>
+              <div className="text-sm uppercase tracking-[0.35em] text-primary">Vente</div>
+              <div className="mt-3 text-2xl font-bold text-white">Une vraie page de vente serveur</div>
+              <p className="mt-4 leading-7 text-slate-300">
+                La structure est désormais pensée pour vendre : offres claires, arguments visibles, comparaison, confiance et appel à l’action.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="relative z-10 py-24">
         <div className="section-shell">
           <div className="glass-card grid gap-8 p-8 md:grid-cols-[1fr_1fr] md:p-10">
@@ -416,6 +522,19 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <footer className="relative z-10 border-t border-white/10 py-10">
+        <div className="section-shell flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <div className="text-lg font-bold tracking-[0.22em] text-white">FALCONHOST</div>
+            <div className="mt-2 text-sm text-slate-400">Hébergement Minecraft premium pensé pour la performance, la stabilité et une image sérieuse.</div>
+          </div>
+
+          <div className="grid gap-2 text-sm text-slate-400 md:text-right">
+            <div>Ryzen 9 9950X3D · NVMe · Support humain</div>
+            <div>Nom, Discord et email à finaliser</div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
