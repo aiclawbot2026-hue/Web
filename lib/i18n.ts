@@ -74,26 +74,32 @@ export const dictionary = {
       secondaryCta: "Contact us",
     },
     differentiation: {
-      eyebrow: "Why us",
-      title: "Why our servers stay stable",
-      intro:
-        "We size our servers to keep performance headroom and reduce slowdowns as activity increases. The priority is simple: a reliable, predictable experience.",
+      eyebrow: "Why choose us",
+      title: "Reliable infrastructure",
+      intro: "",
+      trustPoints: [
+        "Automatic backups",
+        "High-performance NVMe storage",
+        "Stable network connectivity",
+        "Human support",
+        "Designed for consistent performance",
+      ],
       items: [
         {
-          title: "Cleanly allocated resources",
-          text: "Each server gets resources designed to stay consistent in real use.",
+          title: "Clean resource allocation",
+          text: "We size our infrastructure to maintain stable performance.",
         },
         {
-          title: "Controlled capacity",
-          text: "We deliberately limit load per machine to preserve stability.",
+          title: "High-frequency CPU",
+          text: "Optimized for Minecraft and real-world usage.",
         },
         {
           title: "Human support",
-          text: "You speak with a real person when you need help.",
+          text: "You talk to a real person when you need help.",
         },
         {
-          title: "Simple growth",
-          text: "Your server can evolve easily as your community grows.",
+          title: "Simple upgrades",
+          text: "Your server grows smoothly with your community.",
         },
       ],
     },
@@ -248,17 +254,23 @@ export const dictionary = {
     },
     differentiation: {
       eyebrow: "Pourquoi nous choisir",
-      title: "Pourquoi nos serveurs restent stables",
-      intro:
-        "Nous dimensionnons nos serveurs pour conserver une marge de performance et éviter les ralentissements lorsque l’activité augmente. Notre priorité est simple : offrir une expérience fiable et prévisible.",
+      title: "Infrastructure fiable",
+      intro: "",
+      trustPoints: [
+        "Sauvegardes automatiques",
+        "Stockage NVMe haute performance",
+        "Connectivité réseau stable",
+        "Support humain",
+        "Pensé pour des performances constantes",
+      ],
       items: [
         {
           title: "Ressources allouées proprement",
-          text: "Chaque serveur dispose de ressources pensées pour rester performantes en usage réel.",
+          text: "Nous dimensionnons notre infrastructure pour conserver des performances stables.",
         },
         {
-          title: "Capacité maîtrisée",
-          text: "Nous limitons volontairement la charge sur nos serveurs pour préserver la stabilité.",
+          title: "CPU haute fréquence",
+          text: "Optimisé pour Minecraft et pour un usage réel.",
         },
         {
           title: "Support humain",
@@ -266,7 +278,7 @@ export const dictionary = {
         },
         {
           title: "Évolution simple",
-          text: "Votre serveur peut évoluer facilement lorsque votre communauté grandit.",
+          text: "Votre serveur grandit proprement avec votre communauté.",
         },
       ],
     },

@@ -140,13 +140,17 @@ export default function LocalizedPage({ params }: Props) {
                 <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/15 via-transparent to-accent/15 blur-2xl" />
                 <div className="glass-card relative overflow-hidden p-8 shadow-glow md:p-10">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,122,24,0.10),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(90,168,255,0.14),transparent_30%)]" />
-                  <div className="relative space-y-5">
-                    {dict.differentiation.items.map((item) => (
-                      <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <div className="text-base font-semibold text-white">{item.title}</div>
-                        <div className="mt-2 leading-7 text-slate-300">{item.text}</div>
-                      </div>
-                    ))}
+                  <div className="relative">
+                    <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.differentiation.eyebrow}</div>
+                    <h2 className="mt-4 text-3xl font-bold text-white">{dict.differentiation.title}</h2>
+
+                    <div className="mt-8 grid gap-3">
+                      {dict.differentiation.trustPoints.map((point) => (
+                        <div key={point} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200">
+                          {point}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -158,7 +162,15 @@ export default function LocalizedPage({ params }: Props) {
               <div className="max-w-3xl">
                 <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.differentiation.eyebrow}</div>
                 <h2 className="section-title mt-4">{dict.differentiation.title}</h2>
-                <p className="section-copy mt-6">{dict.differentiation.intro}</p>
+              </div>
+
+              <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                {dict.differentiation.items.map((item) => (
+                  <div key={item.title} className="glass-card p-6 md:p-7">
+                    <div className="text-xl font-bold text-white">{item.title}</div>
+                    <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
