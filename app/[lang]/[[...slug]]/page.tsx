@@ -43,14 +43,12 @@ export default function LocalizedPage({ params }: Props) {
     notFound();
   }
 
-  const offersHref = getLocalizedHref(locale, "offers");
   const contactHref = getLocalizedHref(locale, "contact");
 
   const pricingGrid = (
     <div className="grid gap-6 xl:grid-cols-4">
       {dict.offers.items.map((offer) => {
         const isFeatured = offer.featured === true;
-        const buttonLabel = offer.name === "Starter" && locale === "fr" ? "Commencer" : offer.name === "Starter" && locale === "en" ? "Get started" : locale === "fr" ? "Choisir cette offre" : "Choose this plan";
 
         return (
           <article
@@ -65,13 +63,18 @@ export default function LocalizedPage({ params }: Props) {
             ) : null}
 
             <div className="text-2xl font-bold text-white">{offer.name}</div>
-            <div className="mt-3 text-xs uppercase tracking-[0.24em] text-slate-400">{dict.offers.bestForLabel}</div>
-            <p className="mt-2 min-h-[64px] text-sm leading-6 text-slate-300">{offer.fit}</p>
-            <div className="mt-5 text-4xl font-black text-white">{offer.price}</div>
 
             <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
               {offer.specs.join(" · ")}
             </div>
+
+            <div className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
+              {offer.profile.map((line) => (
+                <div key={line}>{line}</div>
+              ))}
+            </div>
+
+            <p className="mt-5 min-h-[72px] text-sm leading-6 text-slate-300">{offer.fit}</p>
 
             <div className="mt-6 space-y-3">
               {offer.benefits.map((benefit) => (
@@ -82,7 +85,9 @@ export default function LocalizedPage({ params }: Props) {
               ))}
             </div>
 
-            <Link href={contactHref} className="cta-primary mt-8 w-full">{buttonLabel}</Link>
+            <div className="mt-8 text-4xl font-black text-white">{offer.price}</div>
+
+            <Link href={contactHref} className="cta-primary mt-8 w-full">{offer.button}</Link>
           </article>
         );
       })}
@@ -153,13 +158,18 @@ export default function LocalizedPage({ params }: Props) {
             </div>
           </section>
 
-          <section id="offers" className="relative z-10 py-8 pb-32">
+          <section id="offers" className="relative z-10 py-8 pb-24">
             <div className="section-shell">
               <div className="mx-auto max-w-3xl text-center">
                 <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.offers.eyebrow}</div>
                 <h2 className="section-title mt-4">{dict.offers.homeTitle}</h2>
+                <p className="section-copy mt-6">{dict.offers.homeSubtitle}</p>
               </div>
               <div className="mt-16">{pricingGrid}</div>
+              <div className="mt-10 text-center text-sm leading-7 text-slate-300">
+                <div>{dict.offers.trustLineTitle}</div>
+                <div>{dict.offers.trustLineText}</div>
+              </div>
             </div>
           </section>
 
