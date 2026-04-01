@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaqAccordion } from "@/components/FaqAccordion";
 import { PageHero } from "@/components/PageHero";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -24,10 +23,6 @@ export async function generateStaticParams() {
 
   for (const lang of locales) {
     params.push({ lang });
-    params.push({ lang, slug: [routeSlugs[lang].offers] });
-    params.push({ lang, slug: [routeSlugs[lang].why] });
-    params.push({ lang, slug: [routeSlugs[lang].support] });
-    params.push({ lang, slug: [routeSlugs[lang].faq] });
     params.push({ lang, slug: [routeSlugs[lang].contact] });
   }
 
@@ -49,20 +44,18 @@ export default function LocalizedPage({ params }: Props) {
   }
 
   const offersHref = getLocalizedHref(locale, "offers");
-  const whyHref = getLocalizedHref(locale, "why");
-  const supportHref = getLocalizedHref(locale, "support");
-  const faqHref = getLocalizedHref(locale, "faq");
   const contactHref = getLocalizedHref(locale, "contact");
 
   const pricingGrid = (
-    <div className="grid gap-6 lg:grid-cols-4">
+    <div className="grid gap-6 xl:grid-cols-4">
       {dict.offers.items.map((offer) => {
         const isFeatured = offer.featured === true;
+        const buttonLabel = offer.name === "Starter" && locale === "fr" ? "Commencer" : offer.name === "Starter" && locale === "en" ? "Get started" : locale === "fr" ? "Choisir cette offre" : "Choose this plan";
 
         return (
           <article
             key={offer.name}
-            className={`pricing-card relative flex h-full flex-col overflow-hidden p-6 ${isFeatured ? "featured-card scale-[1.02]" : ""}`}
+            className={`pricing-card relative flex h-full flex-col overflow-hidden p-6 ${isFeatured ? "featured-card xl:-translate-y-2" : ""}`}
           >
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-accentSoft" />
             {isFeatured ? (
@@ -73,15 +66,11 @@ export default function LocalizedPage({ params }: Props) {
 
             <div className="text-2xl font-bold text-white">{offer.name}</div>
             <div className="mt-3 text-xs uppercase tracking-[0.24em] text-slate-400">{dict.offers.bestForLabel}</div>
-            <p className="mt-2 min-h-[48px] text-sm leading-6 text-slate-300">{offer.fit}</p>
+            <p className="mt-2 min-h-[64px] text-sm leading-6 text-slate-300">{offer.fit}</p>
             <div className="mt-5 text-4xl font-black text-white">{offer.price}</div>
 
-            <div className="mt-6 space-y-3">
-              {offer.specs.map((spec) => (
-                <div key={spec} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-200">
-                  {spec}
-                </div>
-              ))}
+            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
+              {offer.specs.join(" · ")}
             </div>
 
             <div className="mt-6 space-y-3">
@@ -93,7 +82,7 @@ export default function LocalizedPage({ params }: Props) {
               ))}
             </div>
 
-            <Link href={contactHref} className="cta-primary mt-8 w-full">{dict.offers.cta}</Link>
+            <Link href={contactHref} className="cta-primary mt-8 w-full">{buttonLabel}</Link>
           </article>
         );
       })}
@@ -107,20 +96,21 @@ export default function LocalizedPage({ params }: Props) {
       {page === "home" ? (
         <>
           <section className="relative z-10">
-            <div className="section-shell grid min-h-[80vh] items-center gap-16 py-24 md:grid-cols-[1.08fr_0.92fr] md:py-36">
+            <div className="section-shell grid min-h-[82vh] items-center gap-16 py-24 lg:grid-cols-[1.08fr_0.92fr] lg:py-36">
               <div>
                 <div className="mb-5 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm text-primary shadow-glow backdrop-blur-md">
                   {dict.hero.badge}
                 </div>
-                <h1 className="max-w-5xl text-5xl font-black leading-[0.94] text-white md:text-7xl xl:text-[5.2rem]">
+                <h1 className="max-w-4xl text-5xl font-black leading-[0.94] text-white md:text-7xl xl:text-[5rem]">
                   {dict.hero.title}
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">
                   {dict.hero.subtitle}
                 </p>
+                <p className="mt-5 max-w-2xl leading-7 text-slate-300">{dict.hero.intro}</p>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                  <Link href={offersHref} className="cta-primary">{dict.hero.primaryCta}</Link>
+                  <Link href="#offers" className="cta-primary">{dict.hero.primaryCta}</Link>
                   <Link href={contactHref} className="cta-secondary">{dict.hero.secondaryCta}</Link>
                 </div>
 
@@ -140,11 +130,13 @@ export default function LocalizedPage({ params }: Props) {
                 <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary/15 via-transparent to-accent/15 blur-2xl" />
                 <div className="glass-card relative overflow-hidden p-8 shadow-glow md:p-10">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,122,24,0.10),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(90,168,255,0.14),transparent_30%)]" />
-                  <div className="relative">
-                    <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.support.eyebrow}</div>
-                    <h2 className="mt-4 text-3xl font-bold text-white">{dict.support.homeTitle}</h2>
-                    <p className="mt-5 max-w-xl leading-7 text-slate-300">{dict.support.homePreview}</p>
-                    <Link href={supportHref} className="cta-secondary mt-8 w-fit">{dict.home.supportCta}</Link>
+                  <div className="relative space-y-5">
+                    {dict.differentiation.items.map((item) => (
+                      <div key={item.title} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                        <div className="text-base font-semibold text-white">{item.title}</div>
+                        <div className="mt-2 leading-7 text-slate-300">{item.text}</div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -153,176 +145,33 @@ export default function LocalizedPage({ params }: Props) {
 
           <section className="relative z-10 py-32">
             <div className="section-shell">
-              <div className="mx-auto max-w-2xl text-center">
+              <div className="max-w-3xl">
+                <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.differentiation.eyebrow}</div>
+                <h2 className="section-title mt-4">{dict.differentiation.title}</h2>
+                <p className="section-copy mt-6">{dict.differentiation.intro}</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="offers" className="relative z-10 py-8 pb-32">
+            <div className="section-shell">
+              <div className="mx-auto max-w-3xl text-center">
                 <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.offers.eyebrow}</div>
                 <h2 className="section-title mt-4">{dict.offers.homeTitle}</h2>
               </div>
-              <div className="mt-18 mt-16">{pricingGrid}</div>
+              <div className="mt-16">{pricingGrid}</div>
             </div>
           </section>
 
           <section className="relative z-10 py-32">
             <div className="section-shell">
-              <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                <div className="max-w-3xl">
-                  <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.why.eyebrow}</div>
-                  <h2 className="section-title mt-4">{dict.why.homeTitle}</h2>
+              <div className="glass-card p-8 md:p-12">
+                <div className="mx-auto max-w-3xl text-center">
+                  <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.conclusion.eyebrow}</div>
+                  <h2 className="section-title mt-4">{dict.conclusion.title}</h2>
+                  <p className="section-copy mt-6">{dict.conclusion.text}</p>
+                  <p className="mt-5 text-lg font-medium text-white">{dict.conclusion.closing}</p>
                 </div>
-                <Link href={whyHref} className="cta-secondary w-fit">{dict.home.whyCta}</Link>
-              </div>
-
-              <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                {dict.why.items.map((item) => (
-                  <div key={item.title} className="glass-card p-6 md:p-7">
-                    <div className="text-xl font-bold text-white">{item.title}</div>
-                    <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          <section className="relative z-10 py-32">
-            <div className="section-shell grid gap-6 lg:grid-cols-2">
-              <div className="glass-card p-8 md:p-10">
-                <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.faq.eyebrow}</div>
-                <h2 className="section-title mt-4">{dict.faq.homeTitle}</h2>
-                <FaqAccordion items={dict.faq.homeItems} />
-                <Link href={faqHref} className="cta-secondary mt-8 w-fit">{dict.home.faqCta}</Link>
-              </div>
-
-              <div className="glass-card p-8 md:p-10">
-                <div className="text-sm uppercase tracking-[0.35em] text-primary">{dict.contact.eyebrow}</div>
-                <h2 className="section-title mt-4">{dict.contact.homePreviewTitle}</h2>
-                <p className="section-copy mt-5 max-w-xl">{dict.contact.homePreviewText}</p>
-                <div className="mt-8 grid gap-4">
-                  {dict.contact.cards.slice(0, 2).map((card) => (
-                    <div key={card.label} className="rounded-2xl border border-white/10 bg-white/5 p-5">
-                      <div className="text-sm text-slate-400">{card.label}</div>
-                      <div className="mt-2 text-lg font-semibold text-white">{card.value}</div>
-                    </div>
-                  ))}
-                </div>
-                <Link href={contactHref} className="cta-secondary mt-8 w-fit">{dict.home.contactCta}</Link>
-              </div>
-            </div>
-          </section>
-
-          <section className="relative z-10 py-32">
-            <div className="section-shell">
-              <div className="glass-card p-8 text-center md:p-12">
-                <div className="mx-auto max-w-3xl">
-                  <h2 className="section-title">{dict.home.finalTitle}</h2>
-                  <p className="section-copy mt-5">{dict.home.finalText}</p>
-                </div>
-                <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-                  <Link href={offersHref} className="cta-primary">{dict.home.finalPrimary}</Link>
-                  <Link href={contactHref} className="cta-secondary">{dict.home.finalSecondary}</Link>
-                </div>
-              </div>
-            </div>
-          </section>
-        </>
-      ) : null}
-
-      {page === "offers" ? (
-        <>
-          <PageHero eyebrow={dict.offers.eyebrow} title={dict.offers.pageTitle} intro={dict.offers.pageIntro} />
-          <section className="relative z-10 py-6 pb-28">
-            <div className="section-shell">
-              {pricingGrid}
-              <div className="mt-16 grid gap-6 lg:grid-cols-2">
-                {dict.offers.items.map((offer) => (
-                  <div key={offer.name} className="glass-card p-6 md:p-7">
-                    <div className="text-2xl font-bold text-white">{offer.name}</div>
-                    <p className="mt-4 leading-7 text-slate-300">{offer.details}</p>
-                    <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-5 text-slate-300">
-                      <div className="text-sm uppercase tracking-[0.25em] text-slate-400">Upgrade path</div>
-                      <div className="mt-3 leading-7">{offer.upgrade}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="glass-card mt-16 grid gap-6 p-8 md:grid-cols-[1fr_auto_auto] md:items-center md:p-10">
-                <div>
-                  <div className="text-2xl font-bold text-white">{dict.offers.finalCtaTitle}</div>
-                  <p className="mt-3 leading-7 text-slate-300">{dict.offers.finalCtaText}</p>
-                </div>
-                <Link href={contactHref} className="cta-primary">{dict.offers.finalPrimary}</Link>
-                <a href="https://discord.gg/falconhost" className="cta-secondary">{dict.offers.finalSecondary}</a>
-              </div>
-            </div>
-          </section>
-        </>
-      ) : null}
-
-      {page === "why" ? (
-        <>
-          <PageHero eyebrow={dict.why.eyebrow} title={dict.why.pageTitle} intro={dict.why.pageIntro} />
-          <section className="relative z-10 py-6 pb-28">
-            <div className="section-shell">
-              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-                {dict.why.items.map((item) => (
-                  <div key={item.title} className="glass-card p-6 md:p-7">
-                    <div className="text-xl font-bold text-white">{item.title}</div>
-                    <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-16 grid gap-6 lg:grid-cols-2">
-                {dict.why.deep.map((item) => (
-                  <div key={item.title} className="glass-card p-6 md:p-8">
-                    <div className="text-2xl font-bold text-white">{item.title}</div>
-                    <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </>
-      ) : null}
-
-      {page === "support" ? (
-        <>
-          <PageHero eyebrow={dict.support.eyebrow} title={dict.support.pageTitle} intro={dict.support.pageIntro} />
-          <section className="relative z-10 py-6 pb-28">
-            <div className="section-shell">
-              <div className="grid gap-5">
-                {dict.support.items.map((item) => (
-                  <div key={item.step} className="glass-card flex gap-5 p-6 md:p-7">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-lg font-bold text-white">
-                      {item.step}
-                    </div>
-                    <div>
-                      <div className="text-xl font-bold text-white">{item.title}</div>
-                      <p className="mt-3 leading-7 text-slate-300">{item.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-16 grid gap-6 lg:grid-cols-2">
-                {dict.support.deep.map((item) => (
-                  <div key={item.title} className="glass-card p-6 md:p-8">
-                    <div className="text-2xl font-bold text-white">{item.title}</div>
-                    <p className="mt-4 leading-7 text-slate-300">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        </>
-      ) : null}
-
-      {page === "faq" ? (
-        <>
-          <PageHero eyebrow={dict.faq.eyebrow} title={dict.faq.pageTitle} intro={dict.contact.pageIntro} />
-          <section className="relative z-10 py-6 pb-28">
-            <div className="section-shell">
-              <div className="glass-card p-8 md:p-10">
-                <FaqAccordion items={dict.faq.items} />
               </div>
             </div>
           </section>
