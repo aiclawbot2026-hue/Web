@@ -14,6 +14,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
+    radial-gradient(circle at top, rgba(92, 168, 255, 0.08), transparent 24%),
     linear-gradient(180deg, rgba(3, 9, 18, 1) 0%, rgba(7, 17, 31, 1) 45%, rgba(5, 12, 23, 1) 100%),
     #07111f;
   color: #eef4ff;
@@ -29,15 +30,15 @@ body {
 }
 
 .glass-card {
-  @apply rounded-3xl border border-line bg-surface backdrop-blur-xl;
+  @apply rounded-[2rem] border border-line bg-[linear-gradient(180deg,rgba(15,24,40,0.86)_0%,rgba(10,17,29,0.82)_100%)] backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.22)];
 }
 
 .pricing-card {
-  @apply rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,23,38,0.92)_0%,rgba(10,16,28,0.92)_100%)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(0,0,0,0.35)];
+  @apply rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,23,38,0.96)_0%,rgba(10,16,28,0.94)_100%)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_24px_90px_rgba(0,0,0,0.38)];
 }
 
 .featured-card {
-  @apply border-accent/50 shadow-[0_18px_70px_rgba(255,122,24,0.14)];
+  @apply border-primary/45 bg-[linear-gradient(180deg,rgba(26,37,61,0.98)_0%,rgba(14,22,39,0.95)_100%)] shadow-[0_24px_90px_rgba(92,168,255,0.18)];
 }
 
 .section-title {
@@ -49,7 +50,7 @@ body {
 }
 
 .cta-primary {
-  @apply inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-accent to-accentSoft px-6 py-3 font-semibold text-white shadow-cta transition hover:-translate-y-0.5 hover:brightness-110;
+  @apply inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-primary to-[#7c8cff] px-6 py-3 font-semibold text-white shadow-[0_12px_36px_rgba(92,168,255,0.28)] transition hover:-translate-y-0.5 hover:brightness-110;
 }
 
 .cta-secondary {
@@ -58,4 +59,24 @@ body {
 
 .field-input {
   @apply w-full rounded-2xl border border-white/10 bg-[#09111d] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-primary/60;
+}
+
+.home-section {
+  @apply relative z-10 py-32 md:py-36;
+}
+
+.home-panel {
+  @apply rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(15,24,40,0.86)_0%,rgba(10,17,29,0.82)_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl md:p-10;
+}
+
+.spec-chip-blue {
+  @apply rounded-2xl border border-primary/25 bg-primary/10 px-4 py-3 text-slate-100;
+}
+
+.spec-chip-violet {
+  @apply rounded-2xl border border-[#7c8cff]/25 bg-[#7c8cff]/10 px-4 py-3 text-slate-100;
+}
+
+.spec-chip-dark {
+  @apply rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100;
 }
