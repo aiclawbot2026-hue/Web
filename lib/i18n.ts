@@ -68,9 +68,12 @@ export const dictionary = {
         "Cleanly allocated resources for a smoother experience, even as your server grows.",
       intro:
         "High-performance infrastructure, controlled capacity, and human support. Built to stay reliable in real use, not only on paper.",
+      hardwareTitle: "High-performance infrastructure",
+      hardwareText:
+        "Servers powered by high-frequency AMD Ryzen 9 9950X3D processors, up to 5.7 GHz boost, optimized for stable Minecraft performance.",
+      hardwarePoints: ["High-frequency CPU", "Fast NVMe storage", "Cleanly allocated resources"],
       primaryCta: "View plans",
       secondaryCta: "Contact us",
-      highlights: ["Ryzen 9 9950X3D", "NVMe storage", "Daily backups", "Human support"],
     },
     differentiation: {
       eyebrow: "Why us",
@@ -105,23 +108,19 @@ export const dictionary = {
       pageIntro:
         "Choose a plan that fits your server today, then scale cleanly when you need more room.",
       featured: "Recommended",
-      bestForLabel: "Best for",
+      processorLabel: "Processor",
+      processorValue: "High-frequency AMD Ryzen 9 9950X3D (up to 5.7 GHz)",
       cta: "Get started",
-      trustLineTitle: "High-performance infrastructure optimized for Minecraft",
-      trustLineText: "Built to stay smooth as your server grows.",
-      finalCtaTitle: "Need help choosing the right plan?",
-      finalCtaText: "Tell us about your server and we will help you choose the right starting point.",
-      finalPrimary: "Contact us",
-      finalSecondary: "Join Discord",
+      trustLineTitle: "Important information",
+      trustLineText:
+        "Recommended player counts depend on exploration, plugins, mods, and new chunk generation. Our servers are sized to keep performance headroom and deliver stable real-world performance.",
       items: [
         {
           name: "Starter",
           price: "$12.99 / month",
-          fit: "A small private server or a group of friends.",
-          details: "A clean base for light use and a simple way to start with reliable performance.",
-          upgrade: "Scale up easily when your player count or usage becomes more demanding.",
+          fit: "Perfect for a small private server or a group of friends.",
           specs: ["2 vCores", "4 GB RAM", "35 GB NVMe"],
-          profile: ["Vanilla · Light plugins", "5 to 15 recommended players", "Stable performance"],
+          profile: ["Vanilla · Light plugins", "5 to 12 recommended players", "Stable performance"],
           benefits: [
             "Cleanly allocated resources",
             "Automatic backups",
@@ -134,11 +133,9 @@ export const dictionary = {
         {
           name: "Community",
           price: "$19.99 / month",
-          fit: "A small community that wants more headroom and stability.",
-          details: "More room for regular activity, with a stronger balance of power and predictability.",
-          upgrade: "A natural step up when your server becomes more active and needs more margin.",
+          fit: "For a small community that wants more headroom and stability.",
           specs: ["3 vCores", "6 GB RAM", "50 GB NVMe"],
-          profile: ["Vanilla · Moderate plugins", "10 to 25 recommended players", "Enhanced performance"],
+          profile: ["Vanilla · Moderate plugins", "10 to 20 recommended players", "Enhanced performance"],
           benefits: [
             "More resources for regular use",
             "Stable performance under load",
@@ -151,11 +148,9 @@ export const dictionary = {
         {
           name: "Performance",
           price: "$28.99 / month",
-          fit: "More active servers with plugins or regular players.",
-          details: "Built for busier servers that need stronger headroom and more consistency over time.",
-          upgrade: "Ideal when your server is becoming more active and you want stability without interruption.",
+          fit: "For more active servers with plugins or regular players.",
           specs: ["4 vCores", "8 GB RAM", "80 GB NVMe"],
-          profile: ["Active plugins · Regular community", "20 to 40 recommended players", "High performance"],
+          profile: ["Active plugins · Regular community", "15 to 30 recommended players", "High performance"],
           benefits: [
             "More headroom for activity peaks",
             "Stronger stability",
@@ -168,11 +163,9 @@ export const dictionary = {
         {
           name: "Managed Modded",
           price: "$44.99 / month",
-          fit: "Modded or more demanding projects.",
-          details: "For heavier workloads, modded environments, and servers that need closer technical support.",
-          upgrade: "A strong fit when your setup needs more technical room and smoother long-term scaling.",
+          fit: "For modded or more demanding projects.",
           specs: ["6 vCores", "12 GB RAM", "120 GB NVMe"],
-          profile: ["Light to moderate modded", "25 to 50 recommended players", "Advanced performance"],
+          profile: ["Light to moderate modded", "20 to 40 recommended players", "Advanced performance"],
           benefits: [
             "Resources for heavier workloads",
             "Technical guidance",
@@ -249,10 +242,13 @@ export const dictionary = {
       subtitle:
         "Des ressources allouées proprement pour une expérience plus fluide, même lorsque votre serveur grandit.",
       intro:
-        "Infrastructure performante, capacité maîtrisée et support humain. Pensé pour rester fiable en usage réel, pas seulement sur le papier.",
+        "Infrastructure haute performance",
+      hardwareTitle: "Infrastructure haute performance",
+      hardwareText:
+        "Serveurs équipés de processeurs AMD Ryzen 9 9950X3D haute fréquence, jusqu’à 5.7 GHz en boost, optimisés pour des performances stables sur Minecraft.",
+      hardwarePoints: ["CPU haute fréquence", "Stockage NVMe rapide", "Ressources allouées proprement"],
       primaryCta: "Voir les offres",
       secondaryCta: "Nous contacter",
-      highlights: ["Ryzen 9 9950X3D", "Stockage NVMe", "Sauvegardes quotidiennes", "Support humain"],
     },
     differentiation: {
       eyebrow: "Pourquoi nous choisir",
@@ -287,23 +283,19 @@ export const dictionary = {
       pageIntro:
         "Choisissez une base adaptée à votre serveur aujourd’hui, puis montez en gamme proprement quand vous avez besoin de plus de marge.",
       featured: "Offre recommandée",
-      bestForLabel: "Idéal pour",
+      processorLabel: "Processeur",
+      processorValue: "AMD Ryzen 9 9950X3D haute fréquence (jusqu’à 5.7 GHz)",
       cta: "Commencer",
-      trustLineTitle: "Infrastructure haute performance optimisée pour Minecraft",
-      trustLineText: "Pensé pour rester fluide, même lorsque votre serveur grandit.",
-      finalCtaTitle: "Besoin d’aide pour choisir la bonne offre ?",
-      finalCtaText: "Parlez-nous de votre serveur et nous vous orienterons vers la formule la plus cohérente.",
-      finalPrimary: "Nous contacter",
-      finalSecondary: "Rejoindre Discord",
+      trustLineTitle: "Information importante",
+      trustLineText:
+        "Le nombre de joueurs recommandé dépend de l’exploration, des plugins, des mods et de la génération de nouveaux chunks. Nos serveurs sont dimensionnés pour conserver une marge de performance et offrir une expérience stable en usage réel.",
       items: [
         {
           name: "Starter",
           price: "$12.99 / mois",
           fit: "Parfait pour un petit serveur privé ou un groupe d’amis.",
-          details: "Une base propre pour démarrer avec de bonnes performances sur un serveur léger et privé.",
-          upgrade: "Montez facilement en gamme lorsque votre utilisation devient plus régulière ou plus exigeante.",
           specs: ["2 vCores", "4 GB RAM", "35 GB NVMe"],
-          profile: ["Vanilla · Plugins légers", "5 à 15 joueurs recommandés", "Performance stable"],
+          profile: ["Vanilla · Plugins légers", "5 à 12 joueurs recommandés", "Performance stable"],
           benefits: [
             "Ressources allouées proprement",
             "Sauvegardes automatiques",
@@ -317,10 +309,8 @@ export const dictionary = {
           name: "Community",
           price: "$19.99 / mois",
           fit: "Pour une petite communauté qui veut plus de marge et de stabilité.",
-          details: "Plus d’espace pour un usage régulier, avec un meilleur équilibre entre confort et stabilité.",
-          upgrade: "L’étape naturelle quand un petit serveur devient plus actif et demande plus de marge.",
           specs: ["3 vCores", "6 GB RAM", "50 GB NVMe"],
-          profile: ["Vanilla · Plugins modérés", "10 à 25 joueurs recommandés", "Performance renforcée"],
+          profile: ["Vanilla · Plugins modérés", "10 à 20 joueurs recommandés", "Performance renforcée"],
           benefits: [
             "Plus de ressources pour une utilisation régulière",
             "Performances stables en charge",
@@ -334,10 +324,8 @@ export const dictionary = {
           name: "Performance",
           price: "$28.99 / mois",
           fit: "Pour des serveurs plus actifs avec plugins ou joueurs réguliers.",
-          details: "Pensé pour les serveurs plus sollicités qui ont besoin d’une vraie marge et d’une meilleure stabilité dans le temps.",
-          upgrade: "Le bon choix quand votre serveur devient plus vivant et que vous voulez évoluer sans interruption.",
           specs: ["4 vCores", "8 GB RAM", "80 GB NVMe"],
-          profile: ["Plugins actifs · Communauté régulière", "20 à 40 joueurs recommandés", "Haute performance"],
+          profile: ["Plugins actifs · Communauté régulière", "15 à 30 joueurs recommandés", "Haute performance"],
           benefits: [
             "Plus de marge pour les pics d’activité",
             "Stabilité renforcée",
@@ -351,10 +339,8 @@ export const dictionary = {
           name: "Managed Modded",
           price: "$44.99 / mois",
           fit: "Pour les projets moddés ou plus exigeants.",
-          details: "Une offre pensée pour les charges plus lourdes, les environnements moddés et les besoins plus techniques.",
-          upgrade: "Idéal lorsque votre projet demande plus de marge technique et une évolution plus fluide sur la durée.",
           specs: ["6 vCores", "12 GB RAM", "120 GB NVMe"],
-          profile: ["Modded léger à modéré", "25 à 50 joueurs recommandés", "Performance avancée"],
+          profile: ["Modded léger à modéré", "20 à 40 joueurs recommandés", "Performance avancée"],
           benefits: [
             "Ressources adaptées aux charges plus lourdes",
             "Accompagnement technique",

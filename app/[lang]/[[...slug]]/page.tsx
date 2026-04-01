@@ -64,6 +64,11 @@ export default function LocalizedPage({ params }: Props) {
 
             <div className="text-2xl font-bold text-white">{offer.name}</div>
 
+            <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="text-sm text-slate-400">{dict.offers.processorLabel}</div>
+              <div className="mt-2 text-sm leading-6 text-slate-200">{dict.offers.processorValue}</div>
+            </div>
+
             <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-200">
               {offer.specs.join(" · ")}
             </div>
@@ -112,22 +117,22 @@ export default function LocalizedPage({ params }: Props) {
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">
                   {dict.hero.subtitle}
                 </p>
-                <p className="mt-5 max-w-2xl leading-7 text-slate-300">{dict.hero.intro}</p>
+
+                <div className="mt-10 rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                  <div className="text-sm uppercase tracking-[0.32em] text-primary">{dict.hero.hardwareTitle}</div>
+                  <p className="mt-4 max-w-2xl leading-7 text-slate-300">{dict.hero.hardwareText}</p>
+                  <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-200">
+                    {dict.hero.hardwarePoints.map((point) => (
+                      <div key={point} className="rounded-full border border-white/10 bg-white/5 px-4 py-2">
+                        {point}
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                   <Link href="#offers" className="cta-primary">{dict.hero.primaryCta}</Link>
                   <Link href={contactHref} className="cta-secondary">{dict.hero.secondaryCta}</Link>
-                </div>
-
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {dict.hero.highlights.map((item) => (
-                    <div
-                      key={item}
-                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-200 backdrop-blur-md"
-                    >
-                      {item}
-                    </div>
-                  ))}
                 </div>
               </div>
 
@@ -166,9 +171,9 @@ export default function LocalizedPage({ params }: Props) {
                 <p className="section-copy mt-6">{dict.offers.homeSubtitle}</p>
               </div>
               <div className="mt-16">{pricingGrid}</div>
-              <div className="mt-10 text-center text-sm leading-7 text-slate-300">
-                <div>{dict.offers.trustLineTitle}</div>
-                <div>{dict.offers.trustLineText}</div>
+              <div className="glass-card mt-10 p-6 text-sm leading-7 text-slate-300 md:p-8">
+                <div className="text-sm uppercase tracking-[0.3em] text-primary">{dict.offers.trustLineTitle}</div>
+                <p className="mt-4">{dict.offers.trustLineText}</p>
               </div>
             </div>
           </section>
