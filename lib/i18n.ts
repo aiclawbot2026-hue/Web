@@ -74,7 +74,7 @@ export const dictionary = {
         "Human support",
         "Daily backups",
       ],
-      offersTitle: "Simple plans, clearly structured",
+      offersTitle: "A clear preview of our plans",
       offersCta: "View all plans",
       whyTitle: "Why choose us",
       whyCta: "Learn more",
@@ -85,19 +85,26 @@ export const dictionary = {
     },
     offers: {
       eyebrow: "Plans",
-      pageTitle: "Plans built to stay clear and reliable",
+      pageTitle: "Premium plans built for launch and long-term stability",
       pageIntro:
-        "Choose the level of resources that fits your server today, then scale cleanly as your needs evolve.",
+        "A clear premium grid built for a reliable launch, with enough room to grow as your server becomes more active.",
       featured: "Recommended",
       processorLabel: "Processor",
       processorValue: "AMD Ryzen 9 9950X3D high frequency",
       contactCta: "Contact us",
+      addonsTitle: "Options & add-ons",
+      addons: [
+        "Migration assistance",
+        "Priority support",
+        "Additional backups",
+        "Extra storage or RAM upgrades",
+      ],
       playerNote:
         "Recommended player counts depend on exploration, plugins, mods, and new chunk generation.",
       items: [
         {
           name: "Starter",
-          price: "$12.99 / month",
+          price: "$15.99",
           cores: "2 vCores",
           ram: "4 GB RAM",
           storage: "35 GB NVMe",
@@ -108,7 +115,7 @@ export const dictionary = {
         },
         {
           name: "Community",
-          price: "$19.99 / month",
+          price: "$24.99",
           cores: "3 vCores",
           ram: "6 GB RAM",
           storage: "50 GB NVMe",
@@ -119,7 +126,7 @@ export const dictionary = {
         },
         {
           name: "Performance",
-          price: "$28.99 / month",
+          price: "$34.99",
           cores: "4 vCores",
           ram: "8 GB RAM",
           storage: "80 GB NVMe",
@@ -130,7 +137,7 @@ export const dictionary = {
         },
         {
           name: "Managed Modded",
-          price: "$44.99 / month",
+          price: "$54.99",
           cores: "6 vCores",
           ram: "12 GB RAM",
           storage: "120 GB NVMe",
@@ -142,70 +149,64 @@ export const dictionary = {
       ],
     },
     why: {
-      pageTitle: "A premium approach for serious servers",
+      pageTitle: "Why premium hosting makes sense",
       intro:
-        "We focus on clean infrastructure, human support, and stable long-term performance rather than competing on the lowest possible price.",
+        "Infrastructure, performance, support, and philosophy all matter when you want a hosting service that stays credible over time.",
       items: [
         {
-          title: "Clean resources",
-          text: "We allocate resources with enough room to keep your server more consistent in real use.",
+          title: "Infrastructure",
+          text: "Serious hardware, NVMe storage, and placement near Miami for low latency across North America and the Caribbean.",
         },
         {
-          title: "Human support",
-          text: "When you need help, you talk to someone who understands Minecraft hosting.",
+          title: "Performance",
+          text: "Clean resource allocation helps maintain stable performance instead of chasing the lowest possible density.",
         },
         {
-          title: "Daily backups",
-          text: "Your server data is protected with daily backups as a standard part of the service.",
+          title: "Support",
+          text: "When you need help, you speak with a real person who understands Minecraft hosting.",
         },
         {
-          title: "Simple upgrades",
-          text: "As your server grows, you can move up cleanly without rebuilding everything.",
-        },
-        {
-          title: "Serious infrastructure",
-          text: "Ryzen 9 9950X3D, NVMe storage, and infrastructure placed for low latency across North America and the Caribbean.",
+          title: "Philosophy",
+          text: "The goal is not to be the cheapest. The goal is to stay reliable, clear, and premium.",
         },
       ],
     },
     support: {
-      pageTitle: "Support that stays practical and clear",
+      pageTitle: "Migration, setup, optimization, and support",
       intro:
-        "The goal is simple: help you start clean, stay stable, and evolve without unnecessary friction.",
+        "This page is here to reassure hesitant clients: we help before launch, during setup, and as your server evolves.",
       items: [
         {
-          title: "We size the right plan",
-          text: "We help you choose the right offer based on your server, your plugins, and your player count.",
+          title: "Migration",
+          text: "Move from another host more cleanly with help planning the transition.",
         },
         {
-          title: "We keep a clean base",
-          text: "A clean foundation makes long-term hosting more stable, simpler to manage, and easier to trust.",
+          title: "Installation",
+          text: "Start with a cleaner setup and a clearer foundation from day one.",
         },
         {
-          title: "We help you grow",
-          text: "As your community grows, we help you upgrade cleanly without disrupting the server.",
+          title: "Optimization",
+          text: "Choose a better fit for your plugins, gameplay, and real-world player load.",
+        },
+        {
+          title: "Support",
+          text: "Get human help when you need an answer, an adjustment, or a next step.",
         },
       ],
     },
     faq: {
       pageTitle: "Frequently asked questions",
       items: [
-        {
-          q: "Why are you more expensive than a budget host?",
-          a: "Because the focus is on cleaner resource allocation, daily backups, and a more reliable long-term experience.",
-        },
-        {
-          q: "Is this suitable for modded servers?",
-          a: "Yes. Managed Modded is built for more demanding projects, while the other plans fit lighter setups depending on your usage.",
-        },
-        {
-          q: "What happens if my server grows?",
-          a: "You can move to a higher plan cleanly as your needs evolve.",
-        },
-        {
-          q: "How do I get help quickly?",
-          a: "Discord is the fastest way. You can also contact us by email through the contact page.",
-        },
+        { q: "What latency can I expect?", a: "Latency depends on your location, but hosting near Miami is designed to provide a strong experience for North America and the Caribbean." },
+        { q: "Is this good for modded servers?", a: "Yes. Managed Modded is built for heavier projects, while other plans fit lighter setups depending on your needs." },
+        { q: "Are backups included?", a: "Yes. Automatic backups are part of the service." },
+        { q: "Can I upgrade later?", a: "Yes. Plans are designed to scale cleanly as your server grows." },
+        { q: "How do I get support?", a: "Discord is the fastest route, with email also available for project discussions." },
+        { q: "Do you guarantee zero lag?", a: "No serious host should promise that. The goal is stable performance with clean resource allocation." },
+        { q: "Is the hardware shared?", a: "Resources are allocated carefully to maintain a more predictable experience under load." },
+        { q: "Can you help me choose a plan?", a: "Yes. Tell us about your server and we can guide you toward the right option." },
+        { q: "What payment options do you support?", a: "Contact us for current payment details during launch setup." },
+        { q: "Can I run plugins?", a: "Yes, depending on the plan and the weight of your setup." },
       ],
     },
     contact: {
@@ -283,19 +284,26 @@ export const dictionary = {
     },
     offers: {
       eyebrow: "Offres",
-      pageTitle: "Des offres plus lisibles, pensées pour durer",
+      pageTitle: "Des offres premium crédibles pour le lancement",
       pageIntro:
-        "Choisissez le niveau de ressources adapté à votre serveur aujourd’hui, puis évoluez proprement quand vos besoins augmentent.",
+        "Une grille claire, cohérente et pensée pour offrir une base sérieuse dès le départ.",
       featured: "Offre recommandée",
       processorLabel: "Processeur",
       processorValue: "AMD Ryzen 9 9950X3D haute fréquence",
       contactCta: "Nous contacter",
+      addonsTitle: "Options & add-ons",
+      addons: [
+        "Migration assistée",
+        "Support prioritaire",
+        "Sauvegardes renforcées",
+        "Upgrade RAM ou stockage",
+      ],
       playerNote:
         "Le nombre de joueurs recommandé dépend de l’exploration, des plugins, des mods et de la génération de nouveaux chunks.",
       items: [
         {
           name: "Starter",
-          price: "$12.99 / mois",
+          price: "$15.99",
           cores: "2 vCores",
           ram: "4 GB RAM",
           storage: "35 GB NVMe",
@@ -306,7 +314,7 @@ export const dictionary = {
         },
         {
           name: "Community",
-          price: "$19.99 / mois",
+          price: "$24.99",
           cores: "3 vCores",
           ram: "6 GB RAM",
           storage: "50 GB NVMe",
@@ -317,7 +325,7 @@ export const dictionary = {
         },
         {
           name: "Performance",
-          price: "$28.99 / mois",
+          price: "$34.99",
           cores: "4 vCores",
           ram: "8 GB RAM",
           storage: "80 GB NVMe",
@@ -328,7 +336,7 @@ export const dictionary = {
         },
         {
           name: "Managed Modded",
-          price: "$44.99 / mois",
+          price: "$54.99",
           cores: "6 vCores",
           ram: "12 GB RAM",
           storage: "120 GB NVMe",
@@ -340,70 +348,64 @@ export const dictionary = {
       ],
     },
     why: {
-      pageTitle: "Un positionnement premium, clair et sérieux",
+      pageTitle: "Pourquoi notre positionnement est premium",
       intro:
-        "Nous privilégions une infrastructure propre, un support humain et des performances stables dans le temps plutôt qu’un simple prix d’appel.",
+        "Infrastructure, performance, support et philosophie forment un ensemble cohérent pour rendre le service crédible et justifier son prix.",
       items: [
         {
-          title: "Ressources propres",
-          text: "Nous allouons les ressources avec une vraie logique de stabilité pour garder de bonnes performances en usage réel.",
+          title: "Infrastructure",
+          text: "Matériel sérieux, stockage NVMe et proximité Miami pour une latence basse et un service plus cohérent.",
         },
         {
-          title: "Support humain",
-          text: "Quand vous avez besoin d’aide, vous échangez avec une vraie personne qui comprend l’hébergement Minecraft.",
+          title: "Performance",
+          text: "Des ressources mieux tenues pour garder de meilleures performances au lieu de pousser la densité au maximum.",
         },
         {
-          title: "Sauvegardes quotidiennes",
-          text: "Les données de votre serveur sont protégées par des sauvegardes quotidiennes incluses dans la base du service.",
+          title: "Support",
+          text: "Quand vous avez besoin d’aide, vous échangez avec une vraie personne qui comprend votre besoin.",
         },
         {
-          title: "Montée en gamme simple",
-          text: "Quand votre serveur grandit, vous pouvez évoluer proprement sans repartir de zéro.",
-        },
-        {
-          title: "Infrastructure sérieuse",
-          text: "Ryzen 9 9950X3D, stockage NVMe, localisation proche de Miami et infrastructure pensée pour une faible latence.",
+          title: "Philosophie",
+          text: "Le but n’est pas d’être le moins cher. Le but est d’être fiable, clair et crédible dans le temps.",
         },
       ],
     },
     support: {
-      pageTitle: "Un accompagnement simple, clair et utile",
+      pageTitle: "Migration, installation, optimisation et support",
       intro:
-        "Le but est simple : vous aider à partir sur une base cohérente, à rester stable, puis à évoluer sans friction inutile.",
+        "Cette page sert à rassurer les clients hésitants : nous aidons avant le lancement, pendant l’installation et quand le serveur évolue.",
       items: [
         {
-          title: "On calibre la bonne offre",
-          text: "On vous aide à choisir la bonne formule selon votre serveur, vos plugins et votre nombre de joueurs.",
+          title: "Migration",
+          text: "Passer depuis un autre host plus proprement, avec une aide pour organiser la transition.",
         },
         {
-          title: "On garde une base propre",
-          text: "Une base propre rend l’hébergement plus stable, plus simple à gérer et plus crédible dans le temps.",
+          title: "Installation",
+          text: "Démarrer sur une base plus propre et plus claire dès le premier jour.",
         },
         {
-          title: "On vous aide à évoluer",
-          text: "Quand votre communauté grandit, on vous aide à monter en gamme proprement sans perturber le serveur.",
+          title: "Optimisation",
+          text: "Mieux dimensionner l’offre selon les plugins, le gameplay et la vraie charge côté joueurs.",
+        },
+        {
+          title: "Support",
+          text: "Obtenir une aide humaine quand il faut une réponse, un ajustement ou un prochain pas clair.",
         },
       ],
     },
     faq: {
       pageTitle: "Questions fréquentes",
       items: [
-        {
-          q: "Pourquoi êtes-vous plus cher qu’un host budget ?",
-          a: "Parce que l’objectif est d’offrir des ressources mieux tenues, des sauvegardes quotidiennes et une meilleure stabilité dans le temps.",
-        },
-        {
-          q: "Est-ce adapté aux serveurs moddés ?",
-          a: "Oui. Managed Modded est prévu pour les projets plus exigeants, tandis que les autres offres conviennent à des besoins plus légers selon l’usage.",
-        },
-        {
-          q: "Que se passe-t-il si mon serveur grandit ?",
-          a: "Vous pouvez passer sur une offre supérieure proprement à mesure que vos besoins évoluent.",
-        },
-        {
-          q: "Comment obtenir de l’aide rapidement ?",
-          a: "Discord reste le canal le plus rapide. Vous pouvez aussi utiliser l’email via la page contact.",
-        },
+        { q: "Quelle latence puis-je attendre ?", a: "La latence dépend de votre position, mais l’infrastructure proche de Miami vise une bonne expérience pour l’Amérique du Nord et la Caraïbe." },
+        { q: "Est-ce adapté aux mods ?", a: "Oui. Managed Modded est prévu pour les projets plus exigeants, tandis que les autres offres conviennent à des setups plus légers selon vos besoins." },
+        { q: "Les sauvegardes sont-elles incluses ?", a: "Oui. Les sauvegardes automatiques font partie de la base du service." },
+        { q: "Puis-je upgrade plus tard ?", a: "Oui. Les offres sont pensées pour évoluer proprement avec votre serveur." },
+        { q: "Comment obtenir du support ?", a: "Discord reste le canal le plus rapide, avec l’email disponible pour les échanges plus posés." },
+        { q: "Promettez-vous zéro lag ?", a: "Non. Aucun hébergeur sérieux ne devrait le promettre. L’objectif est une performance stable avec des ressources mieux tenues." },
+        { q: "Le matériel est-il partagé ?", a: "Les ressources sont allouées avec une logique de stabilité pour garder une expérience plus prévisible en charge." },
+        { q: "Pouvez-vous m’aider à choisir une offre ?", a: "Oui. Présentez-nous votre serveur et nous vous orienterons vers la bonne formule." },
+        { q: "Quels moyens de paiement acceptez-vous ?", a: "Contactez-nous pour connaître les modalités de paiement disponibles au lancement." },
+        { q: "Puis-je utiliser des plugins ?", a: "Oui, selon l’offre et le poids réel de votre configuration." },
       ],
     },
     contact: {
