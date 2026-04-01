@@ -66,11 +66,9 @@ export const dictionary = {
       title: "Premium Minecraft hosting with stable performance",
       subtitle:
         "Cleanly allocated resources for a smoother experience, even as your server grows.",
-      intro:
-        "High-performance infrastructure, controlled capacity, and human support. Built to stay reliable in real use, not only on paper.",
       hardwareTitle: "High-performance infrastructure",
       hardwareText:
-        "Servers powered by high-frequency AMD Ryzen 9 9950X3D processors, up to 5.7 GHz boost, optimized for stable Minecraft performance.",
+        "High-performance infrastructure based on AMD Ryzen 9 9950X3D processors up to 5.7 GHz, located near Miami, Florida, for low latency and stable performance across North America and the Caribbean.",
       hardwarePoints: ["High-frequency CPU", "Fast NVMe storage", "Cleanly allocated resources"],
       primaryCta: "View plans",
       secondaryCta: "Contact us",
@@ -241,11 +239,9 @@ export const dictionary = {
       title: "Hébergement Minecraft premium avec des performances stables",
       subtitle:
         "Des ressources allouées proprement pour une expérience plus fluide, même lorsque votre serveur grandit.",
-      intro:
-        "Infrastructure haute performance",
       hardwareTitle: "Infrastructure haute performance",
       hardwareText:
-        "Serveurs équipés de processeurs AMD Ryzen 9 9950X3D haute fréquence, jusqu’à 5.7 GHz en boost, optimisés pour des performances stables sur Minecraft.",
+        "Infrastructure haute performance basée sur processeurs AMD Ryzen 9 9950X3D jusqu’à 5.7 GHz, située proche de Miami (Floride) pour une latence faible et des performances stables en Amérique du Nord, dans la Caraïbe.",
       hardwarePoints: ["CPU haute fréquence", "Stockage NVMe rapide", "Ressources allouées proprement"],
       primaryCta: "Voir les offres",
       secondaryCta: "Nous contacter",
