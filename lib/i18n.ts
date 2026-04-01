@@ -45,7 +45,7 @@ export const dictionary = {
     meta: {
       title: "FALCONHOST — Premium Minecraft Hosting",
       description:
-        "Premium Minecraft hosting with clean resources, stable performance, and real human support.",
+        "Premium Minecraft hosting with clean resources, daily backups, and real human support.",
     },
     brand: {
       name: "FALCONHOST",
@@ -54,149 +54,168 @@ export const dictionary = {
     nav: {
       home: "Home",
       offers: "Plans",
-      why: "Why choose us",
+      why: "Why us",
       support: "Support",
       faq: "FAQ",
       contact: "Contact",
       primaryCta: "View plans",
       secondaryCta: "Contact us",
     },
-    hero: {
-      badge: "Stable performance · Clean resource allocation · Human support",
+    home: {
       title: "Premium Minecraft hosting with stable performance",
       subtitle:
-        "Cleanly allocated resources for a smoother experience, even as your server grows.",
-      hardwareTitle: "High-performance infrastructure",
-      hardwareText:
-        "High-performance infrastructure based on AMD Ryzen 9 9950X3D processors up to 5.7 GHz, located near Miami, Florida, for low latency and stable performance across North America and the Caribbean.",
-      hardwarePoints: ["High-frequency CPU", "Fast NVMe storage", "Cleanly allocated resources"],
-      primaryCta: "View plans",
-      secondaryCta: "Contact us",
-    },
-    differentiation: {
-      eyebrow: "Why choose us",
-      title: "Reliable infrastructure",
-      intro: "",
+        "Clean resources, daily backups, and a simple upgrade path.",
+      infra:
+        "High-performance infrastructure based on AMD Ryzen 9 9950X3D, near Miami, with fast NVMe storage and human support.",
+      trustTitle: "Built for reliable performance",
       trustPoints: [
-        "Automatic backups",
-        "High-performance NVMe storage",
-        "Stable network connectivity",
+        "Cleanly allocated resources",
+        "Infrastructure near Miami",
         "Human support",
-        "Designed for consistent performance",
+        "Daily backups",
       ],
-      items: [
-        {
-          title: "Clean resource allocation",
-          text: "We size our infrastructure to maintain stable performance.",
-        },
-        {
-          title: "High-frequency CPU",
-          text: "Optimized for Minecraft and real-world usage.",
-        },
-        {
-          title: "Human support",
-          text: "You talk to a real person when you need help.",
-        },
-        {
-          title: "Simple upgrades",
-          text: "Your server grows smoothly with your community.",
-        },
-      ],
+      offersTitle: "Simple plans, clearly structured",
+      offersCta: "View all plans",
+      whyTitle: "Why choose us",
+      whyCta: "Learn more",
+      finalTitle: "Need a cleaner hosting experience?",
+      finalText: "Tell us about your server and we will help you choose the right starting point.",
+      finalPrimary: "Contact us",
+      finalSecondary: "View plans",
     },
     offers: {
       eyebrow: "Plans",
-      homeTitle: "Simple, clear plans built to last",
-      homeSubtitle:
-        "Cleanly allocated resources for a smoother experience and stable long-term performance.",
-      pageTitle: "Simple, clear plans built to last",
+      pageTitle: "Plans built to stay clear and reliable",
       pageIntro:
-        "Choose a plan that fits your server today, then scale cleanly when you need more room.",
+        "Choose the level of resources that fits your server today, then scale cleanly as your needs evolve.",
       featured: "Recommended",
       processorLabel: "Processor",
-      processorValue: "High-frequency AMD Ryzen 9 9950X3D (up to 5.7 GHz)",
-      cta: "Get started",
-      trustLineTitle: "Important information",
-      trustLineText:
-        "Recommended player counts depend on exploration, plugins, mods, and new chunk generation. Our servers are sized to keep performance headroom and deliver stable real-world performance.",
+      processorValue: "AMD Ryzen 9 9950X3D high frequency",
+      contactCta: "Contact us",
+      playerNote:
+        "Recommended player counts depend on exploration, plugins, mods, and new chunk generation.",
       items: [
         {
           name: "Starter",
           price: "$12.99 / month",
+          cores: "2 vCores",
+          ram: "4 GB RAM",
+          storage: "35 GB NVMe",
+          usage: "Vanilla · Light plugins",
+          players: "5 to 12 recommended players",
           fit: "Perfect for a small private server or a group of friends.",
-          specs: ["2 vCores", "4 GB RAM", "35 GB NVMe"],
-          profile: ["Vanilla · Light plugins", "5 to 12 recommended players", "Stable performance"],
-          benefits: [
-            "Cleanly allocated resources",
-            "Automatic backups",
-            "Human support",
-            "Simple upgrades",
-          ],
-          button: "Get started",
           featured: false,
         },
         {
           name: "Community",
           price: "$19.99 / month",
+          cores: "3 vCores",
+          ram: "6 GB RAM",
+          storage: "50 GB NVMe",
+          usage: "Vanilla · Moderate plugins",
+          players: "10 to 20 recommended players",
           fit: "For a small community that wants more headroom and stability.",
-          specs: ["3 vCores", "6 GB RAM", "50 GB NVMe"],
-          profile: ["Vanilla · Moderate plugins", "10 to 20 recommended players", "Enhanced performance"],
-          benefits: [
-            "More resources for regular use",
-            "Stable performance under load",
-            "Responsive human support",
-            "Easy upgrade path",
-          ],
-          button: "Choose this plan",
           featured: false,
         },
         {
           name: "Performance",
           price: "$28.99 / month",
+          cores: "4 vCores",
+          ram: "8 GB RAM",
+          storage: "80 GB NVMe",
+          usage: "Active plugins · Regular community",
+          players: "15 to 30 recommended players",
           fit: "For more active servers with plugins or regular players.",
-          specs: ["4 vCores", "8 GB RAM", "80 GB NVMe"],
-          profile: ["Active plugins · Regular community", "15 to 30 recommended players", "High performance"],
-          benefits: [
-            "More headroom for activity peaks",
-            "Stronger stability",
-            "Automatic backups",
-            "Upgrade without interruption",
-          ],
-          button: "Choose this plan",
           featured: true,
         },
         {
           name: "Managed Modded",
           price: "$44.99 / month",
+          cores: "6 vCores",
+          ram: "12 GB RAM",
+          storage: "120 GB NVMe",
+          usage: "Light to moderate modded",
+          players: "20 to 40 recommended players",
           fit: "For modded or more demanding projects.",
-          specs: ["6 vCores", "12 GB RAM", "120 GB NVMe"],
-          profile: ["Light to moderate modded", "20 to 40 recommended players", "Advanced performance"],
-          benefits: [
-            "Resources for heavier workloads",
-            "Technical guidance",
-            "Stable performance",
-            "Easy scaling",
-          ],
-          button: "Choose this plan",
           featured: false,
         },
       ],
     },
-    conclusion: {
-      eyebrow: "Approach",
-      title: "A more serious approach to hosting",
-      text:
-        "We focus on cleaner resource management to deliver more stable performance and a better long-term experience.",
-      closing: "Built to stay smooth as your server grows.",
+    why: {
+      pageTitle: "A premium approach for serious servers",
+      intro:
+        "We focus on clean infrastructure, human support, and stable long-term performance rather than competing on the lowest possible price.",
+      items: [
+        {
+          title: "Clean resources",
+          text: "We allocate resources with enough room to keep your server more consistent in real use.",
+        },
+        {
+          title: "Human support",
+          text: "When you need help, you talk to someone who understands Minecraft hosting.",
+        },
+        {
+          title: "Daily backups",
+          text: "Your server data is protected with daily backups as a standard part of the service.",
+        },
+        {
+          title: "Simple upgrades",
+          text: "As your server grows, you can move up cleanly without rebuilding everything.",
+        },
+        {
+          title: "Serious infrastructure",
+          text: "Ryzen 9 9950X3D, NVMe storage, and infrastructure placed for low latency across North America and the Caribbean.",
+        },
+      ],
+    },
+    support: {
+      pageTitle: "Support that stays practical and clear",
+      intro:
+        "The goal is simple: help you start clean, stay stable, and evolve without unnecessary friction.",
+      items: [
+        {
+          title: "We size the right plan",
+          text: "We help you choose the right offer based on your server, your plugins, and your player count.",
+        },
+        {
+          title: "We keep a clean base",
+          text: "A clean foundation makes long-term hosting more stable, simpler to manage, and easier to trust.",
+        },
+        {
+          title: "We help you grow",
+          text: "As your community grows, we help you upgrade cleanly without disrupting the server.",
+        },
+      ],
+    },
+    faq: {
+      pageTitle: "Frequently asked questions",
+      items: [
+        {
+          q: "Why are you more expensive than a budget host?",
+          a: "Because the focus is on cleaner resource allocation, daily backups, and a more reliable long-term experience.",
+        },
+        {
+          q: "Is this suitable for modded servers?",
+          a: "Yes. Managed Modded is built for more demanding projects, while the other plans fit lighter setups depending on your usage.",
+        },
+        {
+          q: "What happens if my server grows?",
+          a: "You can move to a higher plan cleanly as your needs evolve.",
+        },
+        {
+          q: "How do I get help quickly?",
+          a: "Discord is the fastest way. You can also contact us by email through the contact page.",
+        },
+      ],
     },
     contact: {
-      eyebrow: "Contact",
-      pageTitle: "Talk to us about your server.",
-      pageIntro:
-        "For plan advice, migrations, or modded setups, we can help you move in the right direction quickly.",
+      pageTitle: "Talk to us about your server",
+      intro:
+        "Discord, email, or the contact form — choose the easiest way to tell us about your project.",
       cards: [
         { label: "Discord", value: "discord.gg/falconhost" },
         { label: "Email", value: "contact@falconhost.gg" },
-        { label: "Response", value: "Clear replies for projects, upgrades, and migrations" },
+        { label: "Response", value: "Short, clear, human replies" },
       ],
       formTitle: "Tell us about your project",
       fields: {
@@ -214,8 +233,8 @@ export const dictionary = {
       submit: "Send request",
     },
     footer: {
-      tagline: "Premium Minecraft hosting with stable performance and human support.",
-      summary: "Stable performance · Clean resources · Human support",
+      tagline: "Premium Minecraft hosting with clean resources and human support.",
+      summary: "Ryzen 9 9950X3D · NVMe · Daily backups · Human support",
       contact: "Discord: discord.gg/falconhost · contact@falconhost.gg",
       cta: "Contact us",
     },
@@ -224,7 +243,7 @@ export const dictionary = {
     meta: {
       title: "FALCONHOST — Hébergement Minecraft premium",
       description:
-        "Un hébergement Minecraft premium avec des performances stables, des ressources propres et un vrai support humain.",
+        "Un hébergement Minecraft premium avec des ressources propres, des sauvegardes quotidiennes et un vrai support humain.",
     },
     brand: {
       name: "FALCONHOST",
@@ -233,149 +252,168 @@ export const dictionary = {
     nav: {
       home: "Accueil",
       offers: "Offres",
-      why: "Pourquoi nous choisir",
+      why: "Pourquoi nous",
       support: "Accompagnement",
       faq: "FAQ",
       contact: "Contact",
       primaryCta: "Voir les offres",
       secondaryCta: "Nous contacter",
     },
-    hero: {
-      badge: "Performances stables · Ressources propres · Support humain",
+    home: {
       title: "Hébergement Minecraft premium avec des performances stables",
       subtitle:
-        "Des ressources allouées proprement pour une expérience plus fluide, même lorsque votre serveur grandit.",
-      hardwareTitle: "Infrastructure haute performance",
-      hardwareText:
-        "Infrastructure haute performance basée sur processeurs AMD Ryzen 9 9950X3D jusqu’à 5.7 GHz, située proche de Miami (Floride) pour une latence faible et des performances stables en Amérique du Nord, dans la Caraïbe.",
-      hardwarePoints: ["CPU haute fréquence", "Stockage NVMe rapide", "Ressources allouées proprement"],
-      primaryCta: "Voir les offres",
-      secondaryCta: "Nous contacter",
-    },
-    differentiation: {
-      eyebrow: "Pourquoi nous choisir",
-      title: "Infrastructure fiable",
-      intro: "",
+        "Des ressources propres, des sauvegardes quotidiennes et une montée en gamme simple.",
+      infra:
+        "Infrastructure haute performance basée sur AMD Ryzen 9 9950X3D, proche de Miami, avec stockage NVMe rapide et support humain.",
+      trustTitle: "Un cadre fiable pour votre serveur",
       trustPoints: [
-        "Sauvegardes automatiques",
-        "Stockage NVMe haute performance",
-        "Connectivité réseau stable",
+        "Ressources allouées proprement",
+        "Infrastructure proche de Miami",
         "Support humain",
-        "Pensé pour des performances constantes",
+        "Sauvegardes quotidiennes",
       ],
-      items: [
-        {
-          title: "Ressources allouées proprement",
-          text: "Nous dimensionnons notre infrastructure pour conserver des performances stables.",
-        },
-        {
-          title: "CPU haute fréquence",
-          text: "Optimisé pour Minecraft et pour un usage réel.",
-        },
-        {
-          title: "Support humain",
-          text: "Vous échangez avec une vraie personne lorsque vous avez besoin d’aide.",
-        },
-        {
-          title: "Évolution simple",
-          text: "Votre serveur grandit proprement avec votre communauté.",
-        },
-      ],
+      offersTitle: "Un aperçu clair de nos offres",
+      offersCta: "Voir toutes les offres",
+      whyTitle: "Pourquoi nous choisir",
+      whyCta: "Découvrir",
+      finalTitle: "Besoin d’un hosting plus propre et plus stable ?",
+      finalText: "Parlez-nous de votre serveur et nous vous aidons à choisir la bonne base.",
+      finalPrimary: "Nous contacter",
+      finalSecondary: "Voir les offres",
     },
     offers: {
       eyebrow: "Offres",
-      homeTitle: "Des offres simples, claires et pensées pour durer",
-      homeSubtitle:
-        "Des ressources allouées proprement pour une expérience plus fluide et des performances stables dans le temps.",
-      pageTitle: "Des offres simples, claires et pensées pour durer",
+      pageTitle: "Des offres plus lisibles, pensées pour durer",
       pageIntro:
-        "Choisissez une base adaptée à votre serveur aujourd’hui, puis montez en gamme proprement quand vous avez besoin de plus de marge.",
+        "Choisissez le niveau de ressources adapté à votre serveur aujourd’hui, puis évoluez proprement quand vos besoins augmentent.",
       featured: "Offre recommandée",
       processorLabel: "Processeur",
-      processorValue: "AMD Ryzen 9 9950X3D haute fréquence (jusqu’à 5.7 GHz)",
-      cta: "Commencer",
-      trustLineTitle: "Information importante",
-      trustLineText:
-        "Le nombre de joueurs recommandé dépend de l’exploration, des plugins, des mods et de la génération de nouveaux chunks. Nos serveurs sont dimensionnés pour conserver une marge de performance et offrir une expérience stable en usage réel.",
+      processorValue: "AMD Ryzen 9 9950X3D haute fréquence",
+      contactCta: "Nous contacter",
+      playerNote:
+        "Le nombre de joueurs recommandé dépend de l’exploration, des plugins, des mods et de la génération de nouveaux chunks.",
       items: [
         {
           name: "Starter",
           price: "$12.99 / mois",
+          cores: "2 vCores",
+          ram: "4 GB RAM",
+          storage: "35 GB NVMe",
+          usage: "Vanilla · Plugins légers",
+          players: "5 à 12 joueurs recommandés",
           fit: "Parfait pour un petit serveur privé ou un groupe d’amis.",
-          specs: ["2 vCores", "4 GB RAM", "35 GB NVMe"],
-          profile: ["Vanilla · Plugins légers", "5 à 12 joueurs recommandés", "Performance stable"],
-          benefits: [
-            "Ressources allouées proprement",
-            "Sauvegardes automatiques",
-            "Support humain",
-            "Évolution simple",
-          ],
-          button: "Commencer",
           featured: false,
         },
         {
           name: "Community",
           price: "$19.99 / mois",
+          cores: "3 vCores",
+          ram: "6 GB RAM",
+          storage: "50 GB NVMe",
+          usage: "Vanilla · Plugins modérés",
+          players: "10 à 20 joueurs recommandés",
           fit: "Pour une petite communauté qui veut plus de marge et de stabilité.",
-          specs: ["3 vCores", "6 GB RAM", "50 GB NVMe"],
-          profile: ["Vanilla · Plugins modérés", "10 à 20 joueurs recommandés", "Performance renforcée"],
-          benefits: [
-            "Plus de ressources pour une utilisation régulière",
-            "Performances stables en charge",
-            "Support humain réactif",
-            "Upgrade simple",
-          ],
-          button: "Choisir cette offre",
           featured: false,
         },
         {
           name: "Performance",
           price: "$28.99 / mois",
+          cores: "4 vCores",
+          ram: "8 GB RAM",
+          storage: "80 GB NVMe",
+          usage: "Plugins actifs · Communauté régulière",
+          players: "15 à 30 joueurs recommandés",
           fit: "Pour des serveurs plus actifs avec plugins ou joueurs réguliers.",
-          specs: ["4 vCores", "8 GB RAM", "80 GB NVMe"],
-          profile: ["Plugins actifs · Communauté régulière", "15 à 30 joueurs recommandés", "Haute performance"],
-          benefits: [
-            "Plus de marge pour les pics d’activité",
-            "Stabilité renforcée",
-            "Sauvegardes automatiques",
-            "Évolution sans interruption",
-          ],
-          button: "Choisir cette offre",
           featured: true,
         },
         {
           name: "Managed Modded",
           price: "$44.99 / mois",
+          cores: "6 vCores",
+          ram: "12 GB RAM",
+          storage: "120 GB NVMe",
+          usage: "Modded léger à modéré",
+          players: "20 à 40 joueurs recommandés",
           fit: "Pour les projets moddés ou plus exigeants.",
-          specs: ["6 vCores", "12 GB RAM", "120 GB NVMe"],
-          profile: ["Modded léger à modéré", "20 à 40 joueurs recommandés", "Performance avancée"],
-          benefits: [
-            "Ressources adaptées aux charges plus lourdes",
-            "Accompagnement technique",
-            "Performances stables",
-            "Évolutions faciles",
-          ],
-          button: "Choisir cette offre",
           featured: false,
         },
       ],
     },
-    conclusion: {
-      eyebrow: "Notre approche",
-      title: "Une approche plus sérieuse du hosting",
-      text:
-        "Nous privilégions une gestion propre des ressources pour offrir des performances plus stables et une meilleure expérience sur la durée.",
-      closing: "Pensé pour rester fluide, même lorsque votre serveur grandit.",
+    why: {
+      pageTitle: "Un positionnement premium, clair et sérieux",
+      intro:
+        "Nous privilégions une infrastructure propre, un support humain et des performances stables dans le temps plutôt qu’un simple prix d’appel.",
+      items: [
+        {
+          title: "Ressources propres",
+          text: "Nous allouons les ressources avec une vraie logique de stabilité pour garder de bonnes performances en usage réel.",
+        },
+        {
+          title: "Support humain",
+          text: "Quand vous avez besoin d’aide, vous échangez avec une vraie personne qui comprend l’hébergement Minecraft.",
+        },
+        {
+          title: "Sauvegardes quotidiennes",
+          text: "Les données de votre serveur sont protégées par des sauvegardes quotidiennes incluses dans la base du service.",
+        },
+        {
+          title: "Montée en gamme simple",
+          text: "Quand votre serveur grandit, vous pouvez évoluer proprement sans repartir de zéro.",
+        },
+        {
+          title: "Infrastructure sérieuse",
+          text: "Ryzen 9 9950X3D, stockage NVMe, localisation proche de Miami et infrastructure pensée pour une faible latence.",
+        },
+      ],
+    },
+    support: {
+      pageTitle: "Un accompagnement simple, clair et utile",
+      intro:
+        "Le but est simple : vous aider à partir sur une base cohérente, à rester stable, puis à évoluer sans friction inutile.",
+      items: [
+        {
+          title: "On calibre la bonne offre",
+          text: "On vous aide à choisir la bonne formule selon votre serveur, vos plugins et votre nombre de joueurs.",
+        },
+        {
+          title: "On garde une base propre",
+          text: "Une base propre rend l’hébergement plus stable, plus simple à gérer et plus crédible dans le temps.",
+        },
+        {
+          title: "On vous aide à évoluer",
+          text: "Quand votre communauté grandit, on vous aide à monter en gamme proprement sans perturber le serveur.",
+        },
+      ],
+    },
+    faq: {
+      pageTitle: "Questions fréquentes",
+      items: [
+        {
+          q: "Pourquoi êtes-vous plus cher qu’un host budget ?",
+          a: "Parce que l’objectif est d’offrir des ressources mieux tenues, des sauvegardes quotidiennes et une meilleure stabilité dans le temps.",
+        },
+        {
+          q: "Est-ce adapté aux serveurs moddés ?",
+          a: "Oui. Managed Modded est prévu pour les projets plus exigeants, tandis que les autres offres conviennent à des besoins plus légers selon l’usage.",
+        },
+        {
+          q: "Que se passe-t-il si mon serveur grandit ?",
+          a: "Vous pouvez passer sur une offre supérieure proprement à mesure que vos besoins évoluent.",
+        },
+        {
+          q: "Comment obtenir de l’aide rapidement ?",
+          a: "Discord reste le canal le plus rapide. Vous pouvez aussi utiliser l’email via la page contact.",
+        },
+      ],
     },
     contact: {
-      eyebrow: "Contact",
-      pageTitle: "Parlez-nous de votre serveur.",
-      pageIntro:
-        "Pour une offre, une migration ou un projet moddé, nous pouvons vous aider à avancer rapidement dans la bonne direction.",
+      pageTitle: "Parlez-nous de votre serveur",
+      intro:
+        "Discord, email ou formulaire : choisissez le canal le plus simple pour nous présenter votre projet.",
       cards: [
         { label: "Discord", value: "discord.gg/falconhost" },
         { label: "Email", value: "contact@falconhost.gg" },
-        { label: "Réponse", value: "Des retours clairs pour projets, upgrades et migrations" },
+        { label: "Réponse", value: "Des réponses courtes, claires et humaines" },
       ],
       formTitle: "Présentez votre projet",
       fields: {
@@ -393,8 +431,8 @@ export const dictionary = {
       submit: "Envoyer la demande",
     },
     footer: {
-      tagline: "Un hébergement Minecraft premium avec des performances stables et un vrai support humain.",
-      summary: "Performances stables · Ressources propres · Support humain",
+      tagline: "Un hébergement Minecraft premium avec des ressources propres et un vrai support humain.",
+      summary: "Ryzen 9 9950X3D · NVMe · Sauvegardes quotidiennes · Support humain",
       contact: "Discord : discord.gg/falconhost · contact@falconhost.gg",
       cta: "Nous contacter",
     },
